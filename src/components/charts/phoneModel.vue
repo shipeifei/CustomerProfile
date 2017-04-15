@@ -10,6 +10,7 @@
           name: 'phoneModel',
         data() {
             return {
+                chart:null, 
                labelPosition: 'right',
                activeNames: ['1']
             }
@@ -23,9 +24,12 @@
         created () {
             //this.$store.dispatch('getHomeInfo')
         },
-        mounted() {
-            var myChart = echarts.init(document.getElementById('phone-model-container'));
-           let option = {
+        methods: {
+            drawGraph (id) {
+            this.chart=echarts.init(document.getElementById(id));
+            // 皮肤添加同一般使用方式  
+            this.chart.showLoading();
+            this.chart.setOption({
                 title: {
                     text: '手机型号接入',
                     x:'center'
@@ -66,6 +70,15 @@
                     {
                         name:'设备接入',
                         type:'pie',
+                      //   itemStyle: {  
+                      //       normal: {  
+                      //           label:{  
+                      //               show: true,  
+                      //               position:'outer',  
+                      //               formatter: "{b} : {d}%"  
+                      //           }   
+                      //     }  
+                      // },  
                         radius: ['40%', '70%'],
                         data:[
                             {value:335, name:'Iphone7'},
@@ -75,10 +88,14 @@
                         ]
                     }
                 ]
-            };
-
-             // 绘制图表
-            myChart.setOption(option);
+            });
+            this.chart.hideLoading();  
+          }
+        },
+        mounted() {
+            this.$nextTick(()=> {  
+                this.drawGraph('phone-model-container');  
+            }) 
         }
     }
 </script>

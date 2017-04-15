@@ -10,6 +10,7 @@
           name: 'userDevice',
         data() {
             return {
+               chart:null, 
                labelPosition: 'right',
                activeNames: ['1']
             }
@@ -23,9 +24,12 @@
         created () {
             //this.$store.dispatch('getHomeInfo')
         },
-        mounted() {
-            var myChart = echarts.init(document.getElementById('user-device-chart-container'));
-           let option = {
+        methods: {
+            drawGraph (id) {
+            this.chart=echarts.init(document.getElementById(id));
+            // 皮肤添加同一般使用方式  
+            this.chart.showLoading();
+            this.chart.setOption({
                 title: {
                     text: '设备接入',
                     x:'center'
@@ -38,46 +42,35 @@
                     orient : 'vertical',
                     x : 'right',
                     y : 'center',
-                    data:['PC','Mobile','Tablet']
+                    data:this.user_datas.userDevice.legend
                 },
-                // toolbox: {
-                //     show: true,
-                //     feature: {
-                //         mark : {show: true},
-                //         dataView : {show: true, readOnly: false},
-                //         magicType : {
-                //             show: true, 
-                //             type: ['pie', 'funnel'],
-                //             option: {
-                //                 funnel: {
-                //                     x: '25%',
-                //                     width: '50%',
-                //                     funnelAlign: 'left',
-                //                     max: 1548
-                //                 }
-                //             }
-                //         },
-                //         //restore : {show: true},
-                //         //saveAsImage : {show: true}
-                //     }
-                // },
+                
                 calculable : true,
                 series : [
                     {
                         name:'设备接入',
                         type:'pie',
+                        itemStyle: {  
+                            normal: {  
+                                label:{  
+                                    show: true,  
+                                    position:'outer',  
+                                    formatter: "{b} : {d}%"  
+                                }   
+                          }  
+                        },  
                         radius: ['40%', '70%'],
-                        data:[
-                            {value:335, name:'PC'},
-                            {value:310, name:'Mobile'},
-                            {value:234, name:'Tablet'}
-                        ]
+                        data:this.user_datas.userDevice.series
                     }
                 ]
-            };
-
-             // 绘制图表
-            myChart.setOption(option);
+            });
+            this.chart.hideLoading();  
+          }
+        },
+        mounted() {
+           this.$nextTick(()=> {  
+                this.drawGraph('user-device-chart-container');  
+            }) 
         }
     }
 </script>

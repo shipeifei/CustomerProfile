@@ -1,6 +1,6 @@
 const Constant = {
     API: {
-        getUserInfo: '/mock/user.json'
+        getUserInfo: 'http://www.baidu.com/user'
     }
 }
 export default Constant;

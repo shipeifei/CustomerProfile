@@ -32,10 +32,10 @@
                 </el-col>
             </el-row>
             <el-row>
-                <el-col :md="12">
+                <el-col :md="10">
                     <user-map></user-map>
                 </el-col>
-                <el-col :md="12">
+                <el-col :md="14">
                     <phone-model></phone-model>
                 </el-col>
             </el-row>
