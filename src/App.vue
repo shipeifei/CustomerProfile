@@ -1,0 +1,43 @@
+<template>
+  <div id="app-container">
+   <div class="header-container">
+     <nav-category></nav-category>
+   </div>
+   <div class="wrapper">
+ <el-row :gutter="2" > 
+    <!-- <el-col :md="4" >
+        <menu-category></menu-category>
+    </el-col> -->
+    <el-col :md="24" >
+    <div class="wrapper-right">
+    <router-view></router-view>
+    </div>
+    </el-col>
+</el-row>
+   </div>
+  </div>
+</template>
+
+<script type="text/babel">
+import Nav from '@/components/layout/Nav.vue'
+import Menu from '@/components/layout/Menu.vue'
+
+export default {
+  name: 'App',
+  components: {
+    'navCategory': Nav,
+    'menuCategory': Menu
+  }
+}
+</script>
+
+<style lang="less" scoped >
+#app-container {
+    .wrapper{
+        margin-top: 20px;
+        .wrapper-right{
+         padding-right: 20px;
+      }
+    }
+}
+</style>

@@ -1,0 +1,27 @@
+{
+    "userBaseInfo": {
+        "LenovoID": ["646464", "39393"],
+        "phone": "15098989987",
+        "email": "levono@163.com",
+        "IMEI": "暂无",
+        "MicroblogID": "暂无",
+        "WechatID": "暂无",
+        "serviceUsersID": "暂无"
+    },
+    "userFeature": {
+        "origin": "商城",
+        "age": "19-30",
+        "sex": "男",
+        "education": "本科",
+        "salary": "10000-30000",
+        "job": "IT工程师"
+    },
+    "userDevice": {
+        "legend": ["PC", "Mobile", "Tablet"],
+        "series": [
+            { "value": 335, "name": "PC" },
+            { "value": 310, "name": "Mobile" },
+            { "value": 234, "name": "Tablet" }
+        ]
+    }
+}
