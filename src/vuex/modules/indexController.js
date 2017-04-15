@@ -7,6 +7,7 @@ Mock.setup({
     timeout: 400
 })
 Mock.mock('http://www.baidu.com/user', {
+    //用户基本信息
     'userBaseInfo': {
         "LenovoID": Mock.Random.range(1, 10, 2),
         "phone": /1[3｜5|8]\d{5,10}/,
@@ -16,6 +17,7 @@ Mock.mock('http://www.baidu.com/user', {
         "WechatID": "暂无",
         "serviceUsersID": "暂无"
     },
+    //用户个人属性
     "userFeature": {
         "origin": "商城",
         'age|1-100': 100,
@@ -24,6 +26,7 @@ Mock.mock('http://www.baidu.com/user', {
         "salary": Mock.Random.integer(10000, 19999) + "-" + Mock.Random.integer(20000, 30000),
         "job": "IT工程师"
     },
+    //设备接入
     "userDevice": {
         "legend": ["PC", "Mobile", "Tablet"],
         "series": [
@@ -32,6 +35,7 @@ Mock.mock('http://www.baidu.com/user', {
             { "value": Mock.Random.integer(200, 300), "name": "Tablet" }
         ]
     },
+    //手机型号
     "phoneModel": {
         "legend": ['Iphone7', 'ZUK Z2 Pro', 'Vivo', 'XiaoMi'],
         "series": [
