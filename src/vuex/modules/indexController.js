@@ -4,7 +4,7 @@ import $ from 'jquery'
 import * as types from './../mutation-types'
 import Mock from 'mockjs'
 Mock.setup({
-    timeout: 400
+    timeout: 3000
 })
 Mock.mock('http://www.baidu.com/user', {
     //用户基本信息

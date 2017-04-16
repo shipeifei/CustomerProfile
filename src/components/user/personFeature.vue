@@ -27,7 +27,7 @@
                         </el-form-item>
                     </el-form>
                 </el-col>
-                <el-col :md="18">
+                <el-col :md="18" :push="2">
                     <user-device></user-device>
                 </el-col>
             </el-row>
