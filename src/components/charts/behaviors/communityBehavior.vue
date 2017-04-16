@@ -45,7 +45,7 @@
             xAxis : [
                 {
                     type : 'category',
-                    data : ['发帖量', '阅读量','点赞量'],
+                    data : ['转帖数量', '发帖数量','回帖数量'],
                     axisTick: {
                         alignWithLabel: true
                     }
@@ -60,8 +60,16 @@
                 {
                     name:'社区行为',
                     type:'bar',
+                    itemStyle: {
+                        normal: {
+                            color: function(params) {
+                                var colorList = ['#C1232B', '#26C0C0', '#FCCE10', '#E87C25', '#27727B'];
+                                return colorList[params.dataIndex];
+                            }
+                        }
+                    },
                     barWidth: '60%',
-                    data:[10, 29,90]
+                    data:[76, 29, 40]
                 }
             ]
         };

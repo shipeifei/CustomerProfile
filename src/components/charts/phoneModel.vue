@@ -42,7 +42,7 @@
                     orient : 'vertical',
                     x : 'right',
                     y : 'bottom',
-                    data:['Iphone7','ZUK Z2 Pro','Vivo','XiaoMi']
+                    data: this.user_datas.phoneModel.legend
                 },
                 // toolbox: {
                 //     show: true,
@@ -68,7 +68,7 @@
                 calculable : true,
                 series : [
                     {
-                        name:'设备接入',
+                        name:'手机型号接入',
                         type:'pie',
                       //   itemStyle: {  
                       //       normal: {  
@@ -80,12 +80,7 @@
                       //     }  
                       // },  
                         radius: ['40%', '70%'],
-                        data:[
-                            {value:335, name:'Iphone7'},
-                            {value:310, name:'ZUK Z2 Pro'},
-                            {value:234, name:'Vivo'},
-                            {value:1000, name:'XiaoMi'}
-                        ]
+                        data: this.user_datas.phoneModel.series
                     }
                 ]
             });

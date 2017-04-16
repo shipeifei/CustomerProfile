@@ -60,6 +60,14 @@
                 {
                     name:'手机行为',
                     type:'bar',
+                    itemStyle: {
+                        normal: {
+                            color: function(params) {
+                                var colorList = ['#C1232B', '#26C0C0', '#FCCE10', '#E87C25', '#27727B'];
+                                return colorList[params.dataIndex];
+                            }
+                        }
+                    },
                     barWidth: '60%',
                     data:[10, 29,90]
                 }

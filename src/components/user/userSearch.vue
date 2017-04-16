@@ -43,11 +43,12 @@
         },
         methods: {
           handleIconClick(){
-                if ( this.userValidateForm.userName.length > 0 ) {
+              const userName = this.userValidateForm.userName.trim();
+                if ( userName.length > 0 ) {
                       //this.fullscreenLoading = true;
                       //setTimeout(() => {
                         //this.fullscreenLoading = false;
-                        this.$store.dispatch('getUserInfo');
+                        this.$store.dispatch('getUserInfo', userName);
                       //}, 3000);
                 }
                  else {

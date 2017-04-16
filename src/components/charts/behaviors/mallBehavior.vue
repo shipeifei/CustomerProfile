@@ -46,7 +46,7 @@
             xAxis : [
                 {
                     type : 'category',
-                    data : ['加入购物车', '购买'],
+                    data : ['浏览次数', '加入购物车', '购买'],
                     axisTick: {
                         alignWithLabel: true
                     }
@@ -61,8 +61,16 @@
                 {
                     name:'商城行为',
                     type:'bar',
+                    itemStyle: {
+                        normal: {
+                            color: function(params) {
+                                var colorList = ['#C1232B', '#26C0C0', '#FCCE10', '#E87C25', '#27727B'];
+                                return colorList[params.dataIndex];
+                            }
+                        }
+                    },
                     barWidth: '60%',
-                    data:[1022, 220]
+                    data:[522, 220, 47]
                 }
             ]
         };

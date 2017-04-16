@@ -3,49 +3,12 @@ import http from './../service/httpService.js'
 import $ from 'jquery'
 import * as types from './../mutation-types'
 import Mock from 'mockjs'
+import mockedUsers from './mockedUsers'
+
 Mock.setup({
     timeout: 3000
 })
-Mock.mock('http://www.baidu.com/user', {
-    //用户基本信息
-    'userBaseInfo': {
-        "LenovoID": Mock.Random.range(1, 10, 2),
-        "phone": /1[3｜5|8]\d{5,10}/,
-        "email": Mock.Random.first() + "@163.com",
-        "IMEI": "暂无",
-        "MicroblogID": "暂无",
-        "WechatID": "暂无",
-        "serviceUsersID": "暂无"
-    },
-    //用户个人属性
-    "userFeature": {
-        "origin": "商城",
-        'age|1-100': 100,
-        "sex": "男",
-        "education": /['本科'|'专科'|'研究生'|'博士']/,
-        "salary": Mock.Random.integer(10000, 19999) + "-" + Mock.Random.integer(20000, 30000),
-        "job": "IT工程师"
-    },
-    //设备接入
-    "userDevice": {
-        "legend": ["PC", "Mobile", "Tablet"],
-        "series": [
-            { "value": Mock.Random.integer(100, 200), "name": "PC" },
-            { "value": Mock.Random.integer(300, 400), "name": "Mobile" },
-            { "value": Mock.Random.integer(200, 300), "name": "Tablet" }
-        ]
-    },
-    //手机型号
-    "phoneModel": {
-        "legend": ['Iphone7', 'ZUK Z2 Pro', 'Vivo', 'XiaoMi'],
-        "series": [
-            { value: Mock.Random.integer(1000, 2000), name: 'Iphone7' },
-            { value: Mock.Random.integer(300, 6000), name: 'ZUK Z2 Pro' },
-            { value: Mock.Random.integer(130, 200), name: 'Vivo' },
-            { value: Mock.Random.integer(110, 200), name: 'XiaoMi' }
-        ]
-    }
-});
+Mock.mock('http://www.baidu.com/user', mockedUsers);
 const state = {
     user_datas: null,
     home_datas: {},
@@ -61,7 +24,7 @@ const getters = {
 
 // actions
 const actions = {
-    getUserInfo({ commit }) {
+    getUserInfo({ commit }, identity) {
         commit(types.HTTP_STATUS_BEFORE);
         // http.get(Constant.API.getUserInfo, null,
         //     (datas) => commit(types.USER_INFO, datas),
@@ -70,10 +33,15 @@ const actions = {
         $.ajax({
             url: Constant.API.getUserInfo,
         }).done(function(data, status, xhr) {
-            commit(types.USER_INFO, JSON.parse(data));
-            //console.log(
-            //  JSON.stringify(data, null, 4)
-            //)
+            // commit(types.USER_INFO, JSON.parse(data));
+            commit(types.USER_INFO, mockedUsers.find(user => {
+                const baseInfo = user.userBaseInfo;
+
+                return (String(baseInfo.LenovoID) === identity ||
+                    baseInfo.phone === identity ||
+                    baseInfo.email === identity
+                );
+            }));
         })
     }
 }

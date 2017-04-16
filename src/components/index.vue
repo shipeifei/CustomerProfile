@@ -25,14 +25,13 @@
                         <person-feature></person-feature>
                     </div>
                     <div class="person-detail" v-if="menuStatus===true">
-                       <div class="action-feature" >
-                        <action-feature></action-feature>
-                       </div>
                         <div class="person-preference">
                           <person-preference></person-preference>
                         </div>
+                       <div class="action-feature" >
+                        <action-feature></action-feature>
+                       </div>
                     </div>
-                   
                 </div>
             </section>
         </el-col>

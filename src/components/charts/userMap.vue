@@ -33,7 +33,7 @@
     
             let option = {
                 title: {
-                    text: '地理位置',
+                    text: '地域',
                     left: 'center'
                 },
                 tooltip: {

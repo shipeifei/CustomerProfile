@@ -1,7 +1,7 @@
 <template>
     <el-card class="box-card">
         <div slot="header" class="clearfix">
-            <span style="line-height: 36px;">个人偏好</span>
+            <span style="line-height: 36px;">用户详情</span>
         </div>
         <div class="userProp">
             <el-row>
