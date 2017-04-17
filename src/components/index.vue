@@ -76,7 +76,7 @@
             'actionFeature': actionFeature,
             'userSearch': userSearch,
             'personPreference': personPreference,
-            'userDetail': userDetail
+            'userDetail': userDetail,
             'personActive':personActive
           },
         data() {
