@@ -3,41 +3,13 @@
         <table cellspacing="0" cellpadding="0">
             <thead>
                 <th colspan="2">
-                    交际圈
+                    社区社交图谱
                 </th>
             </thead>
             <tbody>
-                <tr>
-                    <td>交际偏好领域</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>微博粉丝数</td>
-                    <td>246</td>
-                </tr>
-                <tr>
-                    <td>微博关注数</td>
-                    <td>270</td>
-                </tr>
-                <tr>
-                    <td>微博互粉数</td>
-                    <td>85</td>
-                </tr>
-                <tr>
-                    <td>微博认证类型</td>
-                    <td>无认证</td>
-                </tr>
-                <tr>
-                    <td>微博认证原因</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>微博个人标签</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>qq群偏好特征</td>
-                    <td></td>
+                <tr v-for="s in user_datas.social">
+                    <td>{{s[0]}}</td>
+                    <td :title="s[1]">{{s[1]}}</td>
                 </tr>
             </tbody>
         </table>

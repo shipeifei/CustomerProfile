@@ -3,41 +3,13 @@
         <table cellspacing="0" cellpadding="0">
             <thead>
                 <th colspan="2">
-                    消费购物
+                    消费购物服务
                 </th>
             </thead>
             <tbody>
-                <tr>
-                    <td>消费偏好领域</td>
-                    <td>住宅家具：1、化妆品：2</td>
-                </tr>
-                <tr>
-                    <td>偏好品类</td>
-                    <td>传统糕点：1、简易衣服：2</td>
-                </tr>
-                <tr>
-                    <td>偏好价格区间</td>
-                    <td>0-100：2、500以上：1</td>
-                </tr>
-                <tr>
-                    <td>消费频率</td>
-                    <td>3.0</td>
-                </tr>
-                <tr>
-                    <td>近期消费次数</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>近期消费总额</td>
-                    <td>725.0</td>
-                </tr>
-                <tr>
-                    <td>使用手机类型</td>
-                    <td>Moto Z</td>
-                </tr>
-                <tr>
-                    <td>信用等级</td>
-                    <td></td>
+                <tr v-for="c in user_datas.consumer">
+                    <td>{{c[0]}}</td>
+                    <td :title="c[1]">{{c[1]}}</td>
                 </tr>
             </tbody>
         </table>

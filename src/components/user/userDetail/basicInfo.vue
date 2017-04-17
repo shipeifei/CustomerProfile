@@ -32,24 +32,28 @@
                     <td>柳州</td>
                 </tr>
                 <tr>
-                    <td>星座</td>
-                    <td>白羊座</td>
-                </tr>
-                <tr>
-                    <td>血型</td>
-                    <td>A型</td>
-                </tr>
-                <tr>
-                    <td>学校</td>
-                    <td>北京大学</td>
-                </tr>
-                <tr>
-                    <td>学历</td>
+                    <td>教育程度</td>
                     <td>{{user_datas.userFeature.education}}</td>
                 </tr>
                 <tr>
-                    <td>工作</td>
-                    <td>{{user_datas.userFeature.job}}</td>
+                    <td>职业</td>
+                    <td>{{user_datas.userFeature.career}}</td>
+                </tr>
+                <tr>
+                    <td>婚否</td>
+                    <td>{{user_datas.userFeature.married}}</td>
+                </tr>
+                <tr>
+                    <td>是否有小孩</td>
+                    <td>{{user_datas.userFeature.hasChildren}}</td>
+                </tr>
+                <tr>
+                    <td>是否有车</td>
+                    <td>{{user_datas.userFeature.hasCar}}</td>
+                </tr>
+                <tr>
+                    <td>是否学生</td>
+                    <td>{{user_datas.userFeature.isStudent}}</td>
                 </tr>
             </tbody>
         </table>
