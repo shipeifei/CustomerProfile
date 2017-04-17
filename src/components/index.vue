@@ -2,9 +2,9 @@
    <div class="user-container">
     <div class="toggle-menu" v-if="user_datas">
         <el-button-group>
-            <el-button @click="changeMenu" :class="{'active':menuStatus===false}"><i class="el-icon-date"></i>概况</el-button>
-            <el-button @click="changeMenu" :class="{'active':menuStatus===true}"><i class="el-icon-menu"></i>详情
-            </el-button>
+            <el-button @click="changeMenu(0)" :class="{'active': menuIndex === 0}"><i class="el-icon-date"></i>概况</el-button>
+            <el-button @click="changeMenu(1)" :class="{'active': menuIndex === 1}"><i class="el-icon-menu"></i>详情</el-button>
+            <el-button @click="changeMenu(2)" :class="{'active': menuIndex === 2}"><i class="el-icon-menu"></i>详情2</el-button>
         </el-button-group>
     </div>
     <!-- <el-breadcrumb separator="/">
@@ -21,7 +21,7 @@
                 <!--个人属性-->
                 <div class="user-search-result" v-if="user_datas">
                     <h2>查询结果</h2>
-                    <div class="person-basic" v-if="menuStatus===false">
+                    <div class="person-basic" v-if="menuIndex === 0">
                         <div class="person-feature">
                             <person-feature></person-feature>
                         </div>
@@ -29,13 +29,16 @@
                             <person-trace></person-trace>
                         </div>
                     </div>
-                    <div class="person-detail" v-if="menuStatus===true">
+                    <div class="person-detail" v-if="menuIndex === 1">
                         <div class="person-preference">
                             <person-preference></person-preference>
                         </div>
                         <div class="action-featur">
                             <action-feature></action-feature>
                         </div>
+                    </div>
+                    <div class="person-detail2" v-if="menuIndex === 2">
+                        <user-detail></user-detail>
                     </div>
                 </div>
             </section>
@@ -57,6 +60,7 @@
     import personTrace from '@/components/user/personTrace.vue'
     import actionFeature from '@/components/user/actionFeature.vue'
     import personPreference from '@/components/user/personPreference.vue'
+    import userDetail from '@/components/user/userDetail/index.vue'
     import { mapGetters } from 'vuex'
     var echarts = require('echarts');
     export default {
@@ -67,13 +71,14 @@
             'personTrace': personTrace,
             'actionFeature': actionFeature,
             'userSearch': userSearch,
-            'personPreference':personPreference
+            'personPreference': personPreference,
+            'userDetail': userDetail
           },
         data() {
             return {
                labelPosition: 'right',
-               menuStatus:false
-                           }
+               menuIndex: 0
+            }
         },
         computed: {
             ...mapGetters({
@@ -86,8 +91,8 @@
         mounted() {
         },
         methods: {
-            changeMenu () {
-              this.menuStatus=!this.menuStatus;
+            changeMenu (menuIndex) {
+              this.menuIndex = menuIndex;
             }
         }
     }
