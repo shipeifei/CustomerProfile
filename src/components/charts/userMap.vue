@@ -1,5 +1,5 @@
 <template>
-<div id="user-map-chart-container" style="width:1000px;height:1000px;"></div>
+<div id="user-map-chart-container" style="width: 100%; height: 100%; min-width: 500px; min-height: 500px;"></div>
 </template>
 <script type="text/babel">
     import $ from 'jquery'

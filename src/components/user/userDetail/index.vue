@@ -50,6 +50,7 @@
     .middle {
         float: left;
         width: 40%;
+        text-align: center;
     }
     .middle img {
         width: 65%;
