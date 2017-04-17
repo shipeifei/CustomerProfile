@@ -39,11 +39,11 @@
                     // shape: 'circle',
                     indicator: [
                        { text: 'IT数码', max: 6500},
-                       { text: '旅游', max: 16000},
-                       { text: '家居', max: 30000},
-                       { text: '时尚', max: 38000},
-                       { text: '服装', max: 52000},
-                       { text: '医疗', max: 25000}
+                       { text: '旅游', max: 10000},
+                       { text: '家居', max: 3000},
+                       { text: '时尚', max: 8000},
+                       { text: '服装', max: 5000},
+                       { text: '医疗', max: 1000}
                     ],
                     radius: 100,      
                     startAngle: 120,   // 改变雷达图的旋转度数
@@ -64,7 +64,7 @@
                     // areaStyle: {normal: {}},
                     data: [
                         {
-                            value: [4300, 10000, 28000, 35000, 50000, 19000],
+                            value: [5500, 8000, 2000, 4600, 2700, 800],
                             name: '消费偏好',
                             label: {
                                 normal: {
