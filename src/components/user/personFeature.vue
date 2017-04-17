@@ -15,7 +15,7 @@
                                 <li :class="[(user_datas.userFeature.age >= 18 && user_datas.userFeature.age <= 25) ? 'active': '']">
                                     18-25
                                 </li>
-                                <li :class="[(user_datas.userFeature.age >= 26 && user_datas.userFeature.age <= 45) ? 'active' : '']">
+                                <li :class="[(user_datas.userFeature.age >= 26 && user_datas.userFeature.age <= 35) ? 'active' : '']">
                                     26-35
                                 </li>
                                 <li :class="[(user_datas.userFeature.age >= 36 && user_datas.userFeature.age <= 60) ? 'active' : '']">

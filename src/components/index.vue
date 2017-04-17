@@ -21,16 +21,21 @@
                 <!--个人属性-->
                 <div class="user-search-result" v-if="user_datas">
                     <h2>查询结果</h2>
-                    <div class="person-feature" v-if="menuStatus===false">
-                        <person-feature></person-feature>
+                    <div class="person-basic" v-if="menuStatus===false">
+                        <div class="person-feature">
+                            <person-feature></person-feature>
+                        </div>
+                        <div class="person-trace">
+                            <person-trace></person-trace>
+                        </div>
                     </div>
                     <div class="person-detail" v-if="menuStatus===true">
                         <div class="person-preference">
-                          <person-preference></person-preference>
+                            <person-preference></person-preference>
                         </div>
-                       <div class="action-feature" >
-                        <action-feature></action-feature>
-                       </div>
+                        <div class="action-featur">
+                            <action-feature></action-feature>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -49,6 +54,7 @@
     import userInfo from '@/components/user/userInfo.vue'
     import userSearch from '@/components/user/userSearch.vue'
     import personFeature from '@/components/user/personFeature.vue'
+    import personTrace from '@/components/user/personTrace.vue'
     import actionFeature from '@/components/user/actionFeature.vue'
     import personPreference from '@/components/user/personPreference.vue'
     import { mapGetters } from 'vuex'
@@ -57,8 +63,9 @@
           name: 'index',
           components: {
             'userInfo': userInfo,
-            'personFeature' :personFeature,
-            'actionFeature' :actionFeature,
+            'personFeature': personFeature,
+            'personTrace': personTrace,
+            'actionFeature': actionFeature,
             'userSearch': userSearch,
             'personPreference':personPreference
           },
