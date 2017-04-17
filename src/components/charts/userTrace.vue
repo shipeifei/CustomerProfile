@@ -1,22 +1,15 @@
 <template>
 <div>
-    
   <div class="history">
    <div class="history-date">
       <div class="year">
         <div>2016年</div>
       </div>
       <ul>
-        <li class="left">
-          <dl>
-            <span>消费达到10K</span>
-          </dl>
-          <h3>12.12<span>2016</span></h3>
-        </li>
         <li class="right">
-          <h3>10.08<span>2016</span></h3>
+          <h3>07.01<span>2016</span></h3>
           <dl>
-            <span>联想商店应用下载达到50个</span>
+            <span>第一次回帖</span>
           </dl>
         </li>
         <li class="left">
@@ -26,10 +19,16 @@
           <h3>09.01<span>2016</span></h3>
         </li>
         <li class="right">
-          <h3>07.01<span>2016</span></h3>
+          <h3>10.08<span>2016</span></h3>
           <dl>
-            <span>第一次回帖</span>
+            <span>联想商店应用下载达到50个</span>
           </dl>
+        </li>
+        <li class="left">
+          <dl>
+            <span>消费达到10K</span>
+          </dl>
+          <h3>12.12<span>2016</span></h3>
         </li>
       </ul>
     </div>
@@ -38,24 +37,21 @@
         <div>2017年</div>
       </div>
       <ul>
-        <li class="left">
-          <dl>
-            <span>首次接受联想服务</span>
-          </dl>
-          <h3>03.18<span>2017</span></h3>
-        </li>
         <li class="right">
           <h3>02.11<span>2017</span></h3>
           <dl>
             <span>第二次发帖</span>
           </dl>
         </li>
+        <li class="left">
+          <dl>
+            <span>首次接受联想服务</span>
+          </dl>
+          <h3>03.18<span>2017</span></h3>
+        </li>
       </ul>
     </div>
-   
-
   </div>
-
   </div>
 </template>
 <script type="text/babel">
