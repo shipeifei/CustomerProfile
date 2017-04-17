@@ -22,11 +22,10 @@ const user1 = {
     },
     //设备接入
     "userDevice": {
-        "legend": ["PC", "Mobile", "Tablet"],
+        "legend": ["PC", "Mobile"],
         "series": [
             { "value": 100, "name": "PC" },
-            { "value": 200, "name": "Mobile" },
-            { "value": 300, "name": "Tablet" }
+            { "value": 200, "name": "Mobile" }
         ]
     },
     //手机型号
@@ -64,12 +63,11 @@ const user2 = {
     },
     //设备接入
     "userDevice": {
-        "legend": ["PC", "Mobile", "Tablet"],
+        "legend": ["PC", "Mobile"],
         "series": [
             { "value": 100, "name": "PC" },
-            { "value": 500, "name": "Mobile" },
-            { "value": 40, "name": "Tablet" }
-        ]
+            { "value": 500, "name": "Mobile" }
+                    ]
     },
     //手机型号
     "phoneModel": {

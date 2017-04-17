@@ -5,9 +5,9 @@
         </div>
         <div class="userProp">
             <el-row>
-                <el-col :md="12">
+                <el-col :md="24">
                     <el-form label-width="80px" v-if="user_datas.userFeature">
-                        <el-form-item label="年龄">
+                        <el-form-item label="年龄：">
                             <ul>
                                 <li :class="[user_datas.userFeature.age < 18 ? 'active': '']">
                                     18以下
@@ -26,7 +26,7 @@
                                 </li>
                             </ul>
                         </el-form-item>
-                        <el-form-item label="性别">
+                        <el-form-item label="性别：">
                             <ul>
                                 <li :class="[user_datas.userFeature.sex == '男' ? 'active': '']">
                                     男
@@ -36,7 +36,7 @@
                                 </li>
                             </ul>
                         </el-form-item>
-                        <el-form-item label="学历">
+                        <el-form-item label="学历：">
                             <ul>
                                 <li :class="[user_datas.userFeature.education === '专科' ? 'active': '']">
                                     专科
@@ -55,7 +55,7 @@
                                 </li>
                             </ul>
                         </el-form-item>
-                        <el-form-item label="收入">
+                        <el-form-item label="收入：">
                             <ul class="salary">
                                 <li :class="[user_datas.userFeature.salary < 3000 ? 'active': '']">
                                     3000以下
@@ -76,17 +76,21 @@
                         </el-form-item>
                     </el-form>
                 </el-col>
-                <el-col :md="12">
-                    <user-device></user-device>
-                </el-col>
+
             </el-row>
             <el-row>
                 <el-col :md="12">
-                    <user-map></user-map>
+                    <user-device></user-device>
                 </el-col>
                 <el-col :md="12">
                     <phone-model></phone-model>
                 </el-col>
+            </el-row>
+            <el-row>
+                <el-col :md="24">
+                    <user-map></user-map>
+                </el-col>
+                
             </el-row>
         </div>
     </el-card>
@@ -128,17 +132,19 @@
     }
     ul li {
         display: inline-block;
-        border: 1px solid black;
-        border-right: 0;
         padding: 0 15px;
         margin: 0;
         float: left;
+        border-radius: 2px;
+            font-size: 14px;
     }
     ul li.active {
-        background-color: #20a0ff;
+        border-color: #20a0ff;
+    background-color: #20a0ff;
+    color: #fff;
+    cursor: default;
     }
     ul li:last-child {
-        border-right: 1px solid black;
     }
     ul.salary li {
         padding-left: 5px;

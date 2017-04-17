@@ -1,25 +1,8 @@
 <template>
+<div>
+    
   <div class="history">
-    <div class="history-date">
-      <div class="year">
-        <div>2017年</div>
-      </div>
-      <ul>
-        <li class="left">
-          <dl>
-            <span>首次接受联想服务</span>
-          </dl>
-          <h3>03.18<span>2017</span></h3>
-        </li>
-        <li class="right">
-          <h3>02.11<span>2017</span></h3>
-          <dl>
-            <span>第二次发帖</span>
-          </dl>
-        </li>
-      </ul>
-    </div>
-    <div class="history-date">
+   <div class="history-date">
       <div class="year">
         <div>2016年</div>
       </div>
@@ -50,6 +33,29 @@
         </li>
       </ul>
     </div>
+    <div class="history-date">
+      <div class="year">
+        <div>2017年</div>
+      </div>
+      <ul>
+        <li class="left">
+          <dl>
+            <span>首次接受联想服务</span>
+          </dl>
+          <h3>03.18<span>2017</span></h3>
+        </li>
+        <li class="right">
+          <h3>02.11<span>2017</span></h3>
+          <dl>
+            <span>第二次发帖</span>
+          </dl>
+        </li>
+      </ul>
+    </div>
+   
+
+  </div>
+
   </div>
 </template>
 <script type="text/babel">

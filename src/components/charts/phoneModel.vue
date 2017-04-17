@@ -1,5 +1,5 @@
 <template>
-<div id="phone-model-container" style="width:500px;height:400px"></div>
+<div id="phone-model-container" style="width:100%;height:400px"></div>
 </template>
 <script type="text/babel">
     import $ from 'jquery'
@@ -41,7 +41,7 @@
                 legend: {
                     orient : 'vertical',
                     x : 'right',
-                    y : 'bottom',
+                    y : 'center',
                     data: this.user_datas.phoneModel.legend
                 },
                 // toolbox: {

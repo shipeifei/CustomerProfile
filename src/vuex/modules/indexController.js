@@ -1,5 +1,6 @@
 import Constant from './../service/httpUrl.js'
 import http from './../service/httpService.js'
+import localforage from 'localforage'
 import $ from 'jquery'
 import * as types from './../mutation-types'
 import Mock from 'mockjs'
@@ -30,9 +31,11 @@ const actions = {
         //     (datas) => commit(types.USER_INFO, datas),
         //     (datas) => commit(types.HTTP_STATUS_ERROR, datas)
         // );
+        
         $.ajax({
             url: Constant.API.getUserInfo,
         }).done(function(data, status, xhr) {
+            localStorage.setItem('customer-profile-username',identity);
             // commit(types.USER_INFO, JSON.parse(data));
             commit(types.USER_INFO, mockedUsers.find(user => {
                 const baseInfo = user.userBaseInfo;

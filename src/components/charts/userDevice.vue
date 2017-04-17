@@ -1,5 +1,5 @@
 <template>
-<div id="user-device-chart-container" style="width:500px;height:400px"></div>
+<div id="user-device-chart-container" style="width:100%;height:400px"></div>
 </template>
 <script type="text/babel">
     import $ from 'jquery'
@@ -7,7 +7,7 @@
     import { mapGetters } from 'vuex'
     var echarts = require('echarts');
     export default {
-          name: 'userDevice',
+        name: 'userDevice',
         data() {
             return {
                chart:null, 

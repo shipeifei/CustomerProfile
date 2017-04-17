@@ -25,7 +25,7 @@
         data() {
             return {
                userValidateForm: {
-                  userName: ''
+                  userName: localStorage.getItem('customer-profile-username')?localStorage.getItem('customer-profile-username'):''
                }
               }
         },

@@ -1,5 +1,5 @@
 <template>
-<div id="user-map-chart-container" style="width:500px;height:400px"></div>
+<div id="user-map-chart-container" style="width:1000px;height:1000px;"></div>
 </template>
 <script type="text/babel">
     import $ from 'jquery'
@@ -27,17 +27,19 @@
         mounted() {
             var myChart = echarts.init(document.getElementById('user-map-chart-container'));
             function randomData() {
-                return Math.round(Math.random()*1000);
+                return Math.round(800,Math.random()*1000);
             }
             echarts.registerMap('china', require('./china.json'))
     
             let option = {
                 title: {
-                    text: '地域',
+                    text: '',
                     left: 'center'
                 },
                 tooltip: {
-                    trigger: 'item'
+                    trigger: 'item',
+                    //backgroundColor:"#ff7f50",//提示标签背景颜色
+                    //textStyle:{color:"#fff"} //提示标签字体颜色
                 },
                 legend: {
                     show: false,
@@ -47,22 +49,16 @@
                 },
                 visualMap: {
                     show:false,
-                    min: 0,
-                    max: 2500,
+                    min: 800,
+                    max: 50000,
                     left: 'left',
                     top: 'bottom',
+                    splitNumber: 5,
+                    realtime: false,
                     text: ['高','低'],           // 文本，默认为数值文本
-                    calculable: true
-                },
-                toolbox: {
-                    show: false,
-                    orient: 'vertical',
-                    left: 'right',
-                    top: 'center',
-                    feature: {
-                        dataView: {readOnly: false},
-                        restore: {},
-                        saveAsImage: {}
+                    calculable: true,
+                    inRange: {
+                        color: ['#d94e5d','#eac736','#50a3ba'].reverse()
                     }
                 },
                 series: [
@@ -74,47 +70,35 @@
                         roam: false,
                         label: {
                             normal: {
-                                show: true
+                                show: true,
+                                //textStyle:{color:"#c71585"}//省份标签字体颜色
+                            },
+                        
+                            emphasis: {//对应的鼠标悬浮效果
+                              show: true
+                                                        
+                              } 
+                        },
+                        itemStyle: {
+                            normal: {
+                                borderWidth: .5,//区域边框宽度
+                                borderColor: '#009fe8',//区域边框颜色
+                                areaColor:"#B0B0B0",//区域颜色
                             },
                             emphasis: {
-                                show: true
+                                borderWidth: .5,
+                                borderColor: '#4b0082',
+                                //areaColor:"#ffdead",
                             }
                         },
                         data:[
-                            {name: '北京',value: randomData() },
-                            {name: '天津',value: randomData() },
-                            {name: '上海',value: randomData() },
-                            {name: '重庆',value: randomData() },
-                            {name: '河北',value: randomData() },
-                            {name: '河南',value: randomData() },
-                            {name: '云南',value: randomData() },
-                            {name: '辽宁',value: randomData() },
-                            {name: '黑龙江',value: randomData() },
-                            {name: '湖南',value: randomData() },
-                            {name: '安徽',value: randomData() },
-                            {name: '山东',value: randomData() },
-                            {name: '新疆',value: randomData() },
-                            {name: '江苏',value: randomData() },
-                            {name: '浙江',value: randomData() },
-                            {name: '江西',value: randomData() },
-                            {name: '湖北',value: randomData() },
-                            {name: '广西',value: randomData() },
-                            {name: '甘肃',value: randomData() },
-                            {name: '山西',value: randomData() },
-                            {name: '内蒙古',value: randomData() },
-                            {name: '陕西',value: randomData() },
-                            {name: '吉林',value: randomData() },
-                            {name: '福建',value: randomData() },
-                            {name: '贵州',value: randomData() },
-                            {name: '广东',value: randomData() },
-                            {name: '青海',value: randomData() },
-                            {name: '西藏',value: randomData() },
-                            {name: '四川',value: randomData() },
-                            {name: '宁夏',value: randomData() },
-                            {name: '海南',value: randomData() },
-                            {name: '台湾',value: randomData() },
-                            {name: '香港',value: randomData() },
-                            {name: '澳门',value: randomData() }
+                            {name: '北京',value: 30000 },
+                            {name: '天津',value: 10000 },
+                            {name: '上海',value: 1000 },
+                            {name: '重庆',value: 30227.92 },
+                            {name: '河北',value: 20000.92 },
+                            {name: '河南',value: 806.98 }
+                        
                         ]
                     }
                 ]

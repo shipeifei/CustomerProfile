@@ -28,6 +28,9 @@
                         <div class="person-trace">
                             <person-trace></person-trace>
                         </div>
+                        <div class="person-active">
+                            <person-active></person-active>
+                        </div>
                     </div>
                     <div class="person-detail" v-if="menuIndex === 1">
                         <div class="person-preference">
@@ -58,6 +61,7 @@
     import userSearch from '@/components/user/userSearch.vue'
     import personFeature from '@/components/user/personFeature.vue'
     import personTrace from '@/components/user/personTrace.vue'
+    import personActive from '@/components/user/personActive.vue'
     import actionFeature from '@/components/user/actionFeature.vue'
     import personPreference from '@/components/user/personPreference.vue'
     import userDetail from '@/components/user/userDetail/index.vue'
@@ -73,6 +77,7 @@
             'userSearch': userSearch,
             'personPreference': personPreference,
             'userDetail': userDetail
+            'personActive':personActive
           },
         data() {
             return {
