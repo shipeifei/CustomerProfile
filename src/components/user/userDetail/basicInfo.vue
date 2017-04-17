@@ -9,47 +9,27 @@
             <tbody>
                 <tr>
                     <td>年龄</td>
-                    <td>30</td>
+                    <td>{{user_datas.userFeature.age}}</td>
                 </tr>
                 <tr>
                     <td>性别</td>
-                    <td>女</td>
+                    <td>{{user_datas.userFeature.sex}}</td>
                 </tr>
                 <tr>
-                    <td>生日</td>
-                    <td>10-01</td>
+                    <td>收入</td>
+                    <td>{{user_datas.userFeature.salary}}</td>
                 </tr>
                 <tr>
-                    <td>所在国家</td>
+                    <td>国家</td>
                     <td>中国</td>
                 </tr>
                 <tr>
-                    <td>所在省份</td>
+                    <td>省份</td>
                     <td>广西</td>
                 </tr>
                 <tr>
-                    <td>所在城市</td>
+                    <td>城市</td>
                     <td>柳州</td>
-                </tr>
-                <tr>
-                    <td>所在区县</td>
-                    <td>柳城</td>
-                </tr>
-                <tr>
-                    <td>故乡国家</td>
-                    <td>中国</td>
-                </tr>
-                <tr>
-                    <td>故乡省份</td>
-                    <td>广西</td>
-                </tr>
-                <tr>
-                    <td>故乡城市</td>
-                    <td>柳州</td>
-                </tr>
-                <tr>
-                    <td>故乡区县</td>
-                    <td>柳城</td>
                 </tr>
                 <tr>
                     <td>星座</td>
@@ -62,6 +42,14 @@
                 <tr>
                     <td>学校</td>
                     <td>北京大学</td>
+                </tr>
+                <tr>
+                    <td>学历</td>
+                    <td>{{user_datas.userFeature.education}}</td>
+                </tr>
+                <tr>
+                    <td>工作</td>
+                    <td>{{user_datas.userFeature.job}}</td>
                 </tr>
             </tbody>
         </table>

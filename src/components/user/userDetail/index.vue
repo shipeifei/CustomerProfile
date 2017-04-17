@@ -9,7 +9,8 @@
             </div>
         </div>
         <div class="img middle">
-            <img src="../../../assets/images/WordArt2.png" alt="" width="65%"></img>
+            <img v-if="user_datas.userFeature.sex === '男'" src="../../../assets/images/wordArtBoy.png" alt=""></img>
+            <img v-else src="../../../assets/images/wordArtGirl.png" alt=""></img>
         </div>
         <div class="basic-info">
             <basic-info></basic-info>
@@ -49,6 +50,9 @@
     .middle {
         float: left;
         width: 40%;
+    }
+    .middle img {
+        width: 65%;
     }
     .social {
         margin-top: 30px;

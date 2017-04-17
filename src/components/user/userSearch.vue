@@ -8,7 +8,7 @@
                         <el-form-item  prop="userName" :rules="[
       { required: true, message: '用户不能为空'}
     ]">
-                            <el-input   icon="search" :on-icon-click="handleIconClick"  v-model.trim="userValidateForm.userName" placeholder="查询用户" auto-complete="off"></el-input>
+                            <el-input icon="search" :on-icon-click="handleIconClick" v-model.trim="userValidateForm.userName" placeholder="查询用户" auto-complete="off"></el-input>
                         </el-form-item>
                     </el-form>
                     </div>
