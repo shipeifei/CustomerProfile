@@ -56,7 +56,6 @@
     import $ from 'jquery'
     import localforage from 'localforage'
     import { mapGetters } from 'vuex'
-    import 'impress.js'
     var echarts = require('echarts');
 
     export default {
