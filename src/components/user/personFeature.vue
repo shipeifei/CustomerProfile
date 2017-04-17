@@ -6,7 +6,7 @@
         <div class="userProp">
             <el-row>
                 <el-col :md="24">
-                    <el-form label-width="80px" v-if="user_datas.userFeature">
+                    <el-form label-width="60px" v-if="user_datas.userFeature">
                         <el-form-item label="年龄：">
                             <ul>
                                 <li :class="[user_datas.userFeature.age < 18 ? 'active': '']">
@@ -136,18 +136,17 @@
         margin: 0;
         float: left;
         border-radius: 2px;
-            font-size: 14px;
+        font-size: 13px;
+        height: 30px;
+        line-height: 30px;
+        width: 90px;
+        text-align: center;
+        color: #48576a;
     }
     ul li.active {
         border-color: #20a0ff;
-    background-color: #20a0ff;
-    color: #fff;
-    cursor: default;
-    }
-    ul li:last-child {
-    }
-    ul.salary li {
-        padding-left: 5px;
-        padding-right: 5px;
+        background-color: #20a0ff;
+        color: #fff;
+        cursor: default;
     }
 </style>

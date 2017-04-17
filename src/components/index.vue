@@ -151,23 +151,4 @@
       }
     }
   }
-  .userProp {
-      // ul {
-      //   li{
-      //     list-style: none;
-      //     text-align: center;
-      //     margin-right: 20px;
-      //     label{
-      //       font-size: 16px;
-      //     }
-      //     span{
-      //       display: inline-block;
-      //       text-align: center;
-      //       padding: 5px;
-      //       width: 100px;
-      //       border:1px solid #121212;
-      //     }
-      //   }
-      // }
-    }
 </style>

@@ -107,7 +107,6 @@
         background: url(../../assets/images/timeline/icon9.png) no-repeat 50% 0;
         height: 87px;
         font-size: 25px;
-        font-family: 微软雅黑;
     }
 
     .history-date .year div {
@@ -169,7 +168,6 @@
         margin-right: 52%;
         margin-top: -10px;
         padding-right: 20px;
-        font-family: 微软雅黑;
         display: block;
         background-color: #FFBB42;
         height: 40px;
@@ -181,7 +179,6 @@
         float: left;
         margin-left: 52%;
         margin-top: -58px;
-        font-family: 微软雅黑;
         display: block;
         background-color: #FFBB42;
         height: 40px;

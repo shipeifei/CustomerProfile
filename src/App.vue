@@ -1,20 +1,20 @@
 <template>
   <div id="app-container">
-   <div class="header-container">
-     <nav-category></nav-category>
-   </div>
-   <div class="wrapper">
- <el-row :gutter="2" > 
-    <!-- <el-col :md="4" >
-        <menu-category></menu-category>
-    </el-col> -->
-    <el-col :md="24" >
-    <div class="wrapper-right">
-    <router-view></router-view>
+    <div class="header-container">
+      <nav-category></nav-category>
     </div>
-    </el-col>
-</el-row>
-   </div>
+    <div class="wrapper">
+      <el-row :gutter="2" > 
+        <!-- <el-col :md="4" >
+            <menu-category></menu-category>
+        </el-col> -->
+        <el-col :md="24">
+          <div class="wrapper-right">
+            <router-view></router-view>
+          </div>
+        </el-col>
+      </el-row>
+    </div>
   </div>
 </template>
 
@@ -31,7 +31,30 @@ export default {
 }
 </script>
 
-<style lang="less" scoped >
+<style lang="less">
+body {
+  font-family: 微软雅黑, Arial;
+}
+
+.el-card__header {
+  padding: 3px 10px;
+}
+
+.el-card__body {
+  padding: 10px;
+
+  .el-form-item {
+    margin-bottom: 8px;
+
+    .el-form-item__label {
+      padding-top: 7px;
+      color: black;
+    }
+  }
+}
+</style>
+
+<style lang="less" scoped>
 #app-container {
     .wrapper{
         margin-top: 20px;
