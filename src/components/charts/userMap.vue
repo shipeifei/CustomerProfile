@@ -22,6 +22,7 @@
     import $ from 'jquery'
     import localforage from 'localforage'
     import { mapGetters } from 'vuex'
+    import {colorsFunc} from '../../colors'
     var echarts = require('echarts');
     require('echarts/extension/bmap/bmap');
     export default {
@@ -89,13 +90,14 @@
                         label: {
                             normal: {
                                 show: false,
-                                //textStyle:{color:"#c71585"}//省份标签字体颜色
+                                //textStyle:{color:"#c71585"}//省份标签字体颜色,
+                                color: colorsFunc
                             },
                         
                             emphasis: {//对应的鼠标悬浮效果
                               show: true
                                                         
-                              } 
+                              }
                         },
                         itemStyle: {
                             normal: {

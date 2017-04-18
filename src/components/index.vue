@@ -19,6 +19,9 @@
                         <div class="person-trace">
                             <person-trace></person-trace>
                         </div>
+                        <div class="word-art">
+                            <word-art></word-art>
+                        </div>
                         <div class="person-active">
                             <person-active></person-active>
                         </div>
@@ -48,6 +51,7 @@
     import personActive from '@/components/user/personActive.vue'
     import actionFeature from '@/components/user/actionFeature.vue'
     import personPreference from '@/components/user/personPreference.vue'
+    import wordArt from '@/components/user/wordArt.vue'
     import { mapGetters } from 'vuex'
     var echarts = require('echarts');
     export default {
@@ -58,7 +62,8 @@
             'actionFeature': actionFeature,
             'userSearch': userSearch,
             'personPreference': personPreference,
-            'personActive':personActive
+            'personActive': personActive,
+            'wordArt': wordArt
           },
         data() {
             return {
@@ -88,6 +93,14 @@
         // max-width: 330px;
         // max-height: 330px;
     }
+</style>
+<style lang="less">
+  .el-collapse {
+    margin-top: 20px;
+    .el-collapse-item__wrap {
+        background-color: white;
+    }
+  }
 </style>
 <style lang="less" scoped>
   .text {
@@ -140,9 +153,5 @@
 
   .user-search-container {
       text-align: center;
-  }
-
-  .el-collapse {
-      margin-top: 20px;
   }
 </style>

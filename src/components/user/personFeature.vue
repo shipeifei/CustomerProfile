@@ -21,7 +21,7 @@
                                         35-49
                                     </li>
                                     <li :class="[user_datas.userFeature.age >= 50 ? 'active' : '']">
-                                        50以上
+                                        50岁以上
                                     </li>
                                 </ul>
                             </el-form-item>
@@ -125,7 +125,15 @@
         }
     }
 </script>
+<style type="less">
+.basic_info .el-form .el-form-item {
+    margin-bottom: 0;
+}
 
+.el-form-item__content  {
+    padding-left: 30px;
+}
+</style>
 <style scoped>
     .basic_info {
         margin-top: 8px;
@@ -144,7 +152,7 @@
         font-size: 13px;
         height: 30px;
         line-height: 30px;
-        width: 120px;
+        /*width: 120px;*/
         text-align: center;
         color: #48576a;
     }

@@ -3,6 +3,7 @@
 </template>
 <script type="text/babel">
     import { mapGetters } from 'vuex'
+    import {colorsFunc} from '../../colors'
     var echarts = require('echarts');
     export default {
         name: 'userDevice',
@@ -54,10 +55,7 @@
                                     position:'outer',  
                                     formatter: "{b}"  
                                 },
-                                color: function(params) {
-                                var colorList = ['#A8D76F', '#F8D347'];
-                                return colorList[params.dataIndex];
-                            }
+                                color: colorsFunc
                           }  
                         },  
                         radius: ['40%', '60%'],

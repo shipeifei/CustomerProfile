@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="basic-info">
         <table cellspacing="0" cellpadding="0">
             <thead>
                 <th colspan="2">
@@ -79,6 +79,10 @@
 </script>
 
 <style scoped>
+    table {
+        float: right;
+        margin-right: 60px;
+    }
     table thead th {
         padding-bottom: 10px;
         font-size: 20px;

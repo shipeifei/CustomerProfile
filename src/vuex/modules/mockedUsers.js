@@ -57,13 +57,10 @@ const user1 = {
     },
     //手机型号
     "phoneModel": {
-        "legend": ['iPhone', 'ZUK', 'Vivo', '小米', '其它'],
+        "legend": ['iPhone', 'ZUK'],
         "series": [
             { value: 1000, name: 'iPhone' },
-            { value: 2000, name: 'ZUK' },
-            { value: 500, name: 'Vivo' },
-            { value: 800, name: '小米' },
-            { value: 600, name: '其它' }
+            { value: 2000, name: 'ZUK' }
         ]
     },
     "serviceBehavior": {
@@ -151,13 +148,10 @@ const user2 = {
     },
     //手机型号
     "phoneModel": {
-        "legend": ['iPhone', 'ZUK', 'Vivo', '小米', '其它'],
+        "legend": ['iPhone', 'Moto Z'],
         "series": [
             { value: 1000, name: 'iPhone' },
-            { value: 2000, name: 'ZUK' },
-            { value: 500, name: 'Vivo' },
-            { value: 800, name: '小米' },
-            { value: 600, name: '其它' }
+            { value: 2000, name: 'Moto Z' }
         ]
     },
     "serviceBehavior": {

@@ -5,6 +5,7 @@
     import $ from 'jquery'
     import localforage from 'localforage'
     import { mapGetters } from 'vuex'
+    import {colorsFunc} from '../../../colors'
     var echarts = require('echarts');
     export default {
           name: 'pcBehavior',
@@ -67,13 +68,7 @@
                     itemStyle: {
                         normal: {
     　　　　　　　　　　　　　　//好，这里就是重头戏了，定义一个list，然后根据所以取得不同的值，这样就实现了，
-                            color: function(params) {
-                                // build a color map as your need.
-                                var colorList = [
-                                  '#C1232B','#26C0C0','#FCCE10','#E87C25','#27727B'
-                                ];
-                                return colorList[params.dataIndex]
-                            },
+                            color: colorsFunc,
     　　　　　　　　　　　　　　//以下为是否显示，显示位置和显示格式的设置了
     //                         label: {
     //                             show: true,

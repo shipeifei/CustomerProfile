@@ -5,6 +5,7 @@
     import $ from 'jquery'
     import localforage from 'localforage'
     import { mapGetters } from 'vuex'
+    import {colorsFunc} from '../../colors'
     var echarts = require('echarts');
     export default {
           name: 'phoneModel',
@@ -70,6 +71,16 @@
                     {
                         name:'手机型号接入',
                         type:'pie',
+                        itemStyle: {  
+                            normal: {  
+                                label:{  
+                                    show: true,  
+                                    position:'outer',  
+                                    formatter: "{b}"  
+                                },
+                                color: colorsFunc
+                          }  
+                        },
                       //   itemStyle: {  
                       //       normal: {  
                       //           label:{  

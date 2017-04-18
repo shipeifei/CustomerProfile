@@ -12,7 +12,7 @@
             <img v-if="user_datas.userFeature.sex === '男'" src="../../../assets/images/wordArtBoy.png" alt=""></img>
             <img v-else src="../../../assets/images/wordArtGirl.png" alt=""></img>
         </div>
-        <div class="basic-info">
+        <div class="basic-info-container">
             <basic-info></basic-info>
         </div>
     </div>
@@ -46,10 +46,12 @@
     .left {
         float: left;
         width: 30%;
+        margin-left: 50px;
+        padding-bottom: 15px;
     }
     .middle {
         float: left;
-        width: 40%;
+        width: 30%;
         text-align: center;
     }
     .middle img {
@@ -58,7 +60,7 @@
     .social {
         margin-top: 30px;
     }
-    .basic-info {
+    .basic-info-container {
         float: right;
         width: 30%;
     }

@@ -74,9 +74,9 @@ ul.user-info-list {
   font-size: 14px;
   padding-left: 7px;
   li {
-    padding: 8px 0;
+    padding: 2px 0;
     div:first-child {
-      width: 140px;
+      width: 96px;
       display: inline-block;
     }
     div:last-child {
