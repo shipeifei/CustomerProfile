@@ -27,7 +27,7 @@
            var myChart = echarts.init(document.getElementById('media-preference-chart-container'));
            let option = {
                 title: {
-                    text: '媒体偏好',
+                    text: '社交偏好',
                     x:'center'
                 },
                 tooltip: {},
@@ -52,7 +52,7 @@
                   show: true
                 },
                 series: [{
-                    name: '媒体偏好',
+                    name: '社交偏好',
                     type: 'radar',
                     itemStyle: {//图形样式，可设置图表内图形的默认样式和强调样式（悬浮时样式）：
                     normal: {
@@ -65,7 +65,7 @@
                     data: [
                         {
                             value: [4300, 10000, 28000, 35000, 50000, 19000],
-                            name: '媒体偏好',
+                            name: '社交偏好',
                             label: {
                                 normal: {
                                     show: true,

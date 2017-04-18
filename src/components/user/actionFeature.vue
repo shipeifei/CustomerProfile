@@ -1,20 +1,23 @@
 <template>
     <el-collapse v-model="activeNames">
-        <el-collapse-item title="行为属性" name="1">
+        <el-collapse-item title="行为偏好" name="1">
+            <el-row style="padding-top: 50px;">
+                <el-col :md="8">
+                    <media-preference></media-preference>
+                </el-col>
+                <el-col :md="8">
+                    <consume-preference></consume-preference>
+                </el-col>
+            </el-row>
             <el-row>
-                <el-col :md="16">
+                <el-col :md="8">
                     <pc-behavior></pc-behavior>
                 </el-col>
                 <el-col :md="8">
                     <mall-behavior></mall-behavior>
                 </el-col>
-            </el-row>
-            <el-row style="padding-top: 50px;">
                 <el-col :md="8">
                     <community-behavior></community-behavior>
-                </el-col>
-                <el-col :md="8">
-                    <service-behavior></service-behavior>
                 </el-col>
             </el-row>
         </el-collapse-item>
@@ -30,6 +33,8 @@
     import phoneBehavior from '@/components/charts/behaviors/phoneBehavior.vue'
     import pcBehavior from '@/components/charts/behaviors/pcBehavior.vue'
     import downloadBehavior from '@/components/charts/behaviors/downloadBehavior.vue'
+    import mediaPreference from '@/components/charts/preferences/mediaPreference.vue'
+    import consumePreference from '@/components/charts/preferences/consumePreference.vue'
     import { mapGetters } from 'vuex'
     var echarts = require('echarts');
     export default {
@@ -40,7 +45,9 @@
             'communityBehavior': communityBehavior,
             'phoneBehavior': phoneBehavior,
             'pcBehavior': pcBehavior,
-            'downloadBehavior' :downloadBehavior
+            'downloadBehavior' :downloadBehavior,
+            'mediaPreference' :mediaPreference,
+            'consumePreference' :consumePreference
           },
         computed: {
             ...mapGetters({

@@ -1,5 +1,5 @@
 <template>
-<div id="pc-behavior-chart-container" class="chart-container large-chart-container"></div>
+<div id="pc-behavior-chart-container" class="chart-container"></div>
 </template>
 <script type="text/babel">
     import $ from 'jquery'
@@ -27,7 +27,7 @@
            var myChart = echarts.init(document.getElementById('pc-behavior-chart-container'));
            let option = {
             title:{
-                text: '应用使用Top 10',
+                text: '应用使用Top 5',
                 subtext: '(一个月内)',
                 x:'center'
             },
@@ -46,7 +46,7 @@
             xAxis : [
                 {
                     type : 'category',
-                    data : ['联想一键修复', '联想电脑管家', '360安全卫士', 'IE浏览器', '微信', 'Outlook', 'MSN', 'PowerPoint', '腾讯QQ', '联想账号'],
+                    data : ['联想一键修复', '联想电脑管家', '360安全卫士', 'IE浏览器', '微信'],
                     axisTick: {
                         alignWithLabel: true
                     },
@@ -62,7 +62,7 @@
             ],
             series : [
                 {
-                    name:'应用使用Top 10',
+                    name:'应用使用Top 5',
                     type:'bar',
                     itemStyle: {
                         normal: {
@@ -84,7 +84,7 @@
                         }
                     },
                     barWidth: '60%',
-                    data:[154, 129, 123, 100, 85, 67, 50, 37, 23, 12]
+                    data:[154, 129, 123, 100, 85]
                 }
             ]
         };

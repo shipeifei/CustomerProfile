@@ -22,9 +22,6 @@
                         <div class="person-active">
                             <person-active></person-active>
                         </div>
-                        <div class="person-preference">
-                            <person-preference></person-preference>
-                        </div>
                         <div class="action-featur">
                             <action-feature></action-feature>
                         </div>

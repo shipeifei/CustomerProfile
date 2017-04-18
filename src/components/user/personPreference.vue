@@ -1,6 +1,6 @@
 <template>
     <el-collapse v-model="activeNames">
-        <el-collapse-item title="用户详情" name="1">
+        <el-collapse-item title="APP行为" name="1">
             <el-row>
                 <el-col :md="8">
                     <media-preference></media-preference>
