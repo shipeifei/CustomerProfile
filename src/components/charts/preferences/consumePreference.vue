@@ -1,5 +1,5 @@
 <template>
-<div id="consume-preference-chart-container" style="width:500px;height:400px"></div>
+<div id="consume-preference-chart-container" class="chart-container"></div>
 </template>
 <script type="text/babel">
     import $ from 'jquery'

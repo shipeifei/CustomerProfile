@@ -1,7 +1,7 @@
 <template>
     <el-card class="box-card">
         <div slot="header" class="clearfix">
-            <span style="line-height: 36px;">轨迹</span>
+            <span style="line-height: 30px;">轨迹</span>
         </div>
         <div class="userProp">
             <user-trace></user-trace>

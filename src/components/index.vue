@@ -19,7 +19,6 @@
                 </div>
                 <!--个人属性-->
                 <div class="user-search-result" v-if="user_datas">
-                    <h2>查询结果</h2>
                     <div class="person-basic" v-if="menuIndex === 0">
                         <!--<div class="user-info">
                             <user-info ></user-info>

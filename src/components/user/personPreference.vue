@@ -1,14 +1,14 @@
 <template>
     <el-card class="box-card">
         <div slot="header" class="clearfix">
-            <span style="line-height: 36px;">用户详情</span>
+            <span style="line-height: 30px;">用户详情</span>
         </div>
         <div class="userProp">
             <el-row>
-                <el-col :md="12">
+                <el-col :md="8">
                     <media-preference></media-preference>
                 </el-col>
-                <el-col :md="12">
+                <el-col :md="8">
                     <consume-preference></consume-preference>
                 </el-col>
             </el-row>

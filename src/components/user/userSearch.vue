@@ -1,7 +1,6 @@
 <template>
     <section class="user-search" v-loading.fullscreen.lock="fullscreenLoading" element-loading-text="拼命加载中">
         <h2>用户查询</h2>
-        <p>支持手机号/LenovoID/Mail/IMEI/SN/ServiceUserID</p>
         <div class="search-block">
             <el-form :model="userValidateForm" :inline="true" ref="userValidateForm">
                <!--  <el-form-item prop="userName" :rules="[
@@ -9,8 +8,8 @@
     ]">
                     <el-input icon="search" :on-icon-click="serchClick" v-model.trim="userValidateForm.userName" placeholder="查询用户" auto-complete="off"></el-input>
                 </el-form-item> -->
-                <el-form-item>
-                    <el-autocomplete popper-class="my-autocomplete" v-model="userValidateForm.userName" :fetch-suggestions="querySearch" custom-item="my-item-zh" placeholder="请输入内容" @select="handleSelect" icon="search" :on-icon-click="serchClick"></el-autocomplete>
+                <el-form-item label="用户查询">
+                    <el-autocomplete popper-class="my-autocomplete" v-model="userValidateForm.userName" :fetch-suggestions="querySearch" custom-item="my-item-zh" placeholder="Phone/LenovoID/Mail/IMEI/SN/ServiceUserID" @select="handleSelect" icon="search" :on-icon-click="serchClick"></el-autocomplete>
                 </el-form-item>
             </el-form>
         </div>
@@ -117,19 +116,20 @@
         color: #1f2f3d;
         margin: 0;
   }
-  p {
-        font-size: 14px;
-        color:#5e6d82;
-        line-height: 1.5em;
-        margin: 5px 0;
-  }
   .search-block {
         border-radius: 4px;
         transition: .2s;
   }
 
   .el-form-item {
-    margin-bottom: 0;
+    margin-bottom: 0;    
+    label.el-form-item__label {
+      font-weight: bold !important;
+      font-size: 16px !important;
+    }
+    .el-input {
+      width: 400px;
+    }
   }
 }
     .my-autocomplete {

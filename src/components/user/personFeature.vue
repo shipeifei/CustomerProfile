@@ -1,7 +1,7 @@
 <template>
     <el-card class="box-card">
         <div slot="header" class="clearfix">
-            <span style="line-height: 36px;">基本信息</span>
+            <span style="line-height: 30px;">基本信息</span>
         </div>
         <div class="userProp">
             <el-row>
@@ -9,20 +9,20 @@
                     <el-form label-width="60px" v-if="user_datas.userFeature">
                         <el-form-item label="年龄：">
                             <ul>
-                                <li :class="[user_datas.userFeature.age < 18 ? 'active': '']">
-                                    18以下
+                                <li :class="[user_datas.userFeature.age <= 18 ? 'active': '']">
+                                    18岁以下
                                 </li>
-                                <li :class="[(user_datas.userFeature.age >= 18 && user_datas.userFeature.age <= 25) ? 'active': '']">
-                                    18-25
+                                <li :class="[(user_datas.userFeature.age >= 19 && user_datas.userFeature.age <= 24) ? 'active': '']">
+                                    19-24
                                 </li>
-                                <li :class="[(user_datas.userFeature.age >= 26 && user_datas.userFeature.age <= 35) ? 'active' : '']">
-                                    26-35
+                                <li :class="[(user_datas.userFeature.age >= 25 && user_datas.userFeature.age <= 34) ? 'active' : '']">
+                                    25-34
                                 </li>
-                                <li :class="[(user_datas.userFeature.age >= 36 && user_datas.userFeature.age <= 60) ? 'active' : '']">
-                                    36-60
+                                <li :class="[(user_datas.userFeature.age >= 35 && user_datas.userFeature.age <= 49) ? 'active' : '']">
+                                    35-49
                                 </li>
-                                <li :class="[user_datas.userFeature.age > 60 ? 'active' : '']">
-                                    60以上
+                                <li :class="[user_datas.userFeature.age >= 50 ? 'active' : '']">
+                                    50以上
                                 </li>
                             </ul>
                         </el-form-item>
@@ -38,38 +38,35 @@
                         </el-form-item>
                         <el-form-item label="学历：">
                             <ul>
-                                <li :class="[user_datas.userFeature.education === '专科' ? 'active': '']">
-                                    专科
+                                <li :class="[user_datas.userFeature.education === '高中、中专及以下' ? 'active': '']">
+                                    高中、中专及以下
                                 </li>
-                                <li :class="[user_datas.userFeature.education === '本科' ? 'active': '']">
-                                    本科
+                                <li :class="[user_datas.userFeature.education === '大专、本科' ? 'active': '']">
+                                    大专、本科
                                 </li>
                                 <li :class="[user_datas.userFeature.education === '硕士' ? 'active' : '']">
                                     硕士
                                 </li>
-                                <li :class="[user_datas.userFeature.education === '博士' ? 'active' : '']">
-                                    博士
-                                </li>
-                                <li :class="[(user_datas.userFeature.education != '专科' && user_datas.userFeature.education != '本科' && user_datas.userFeature.education != '硕士' && user_datas.userFeature.education != '博士') ? 'active' : '']">
-                                    其它
+                                <li :class="[user_datas.userFeature.education === '硕士以上' ? 'active' : '']">
+                                    硕士以上
                                 </li>
                             </ul>
                         </el-form-item>
                         <el-form-item label="收入：">
                             <ul class="salary">
-                                <li :class="[user_datas.userFeature.salary < 3000 ? 'active': '']">
-                                    3000以下
+                                <li :class="[user_datas.userFeature.salary < 3500 ? 'active': '']">
+                                    3500以下
                                 </li>
-                                <li :class="[(user_datas.userFeature.salary >= 3000 && user_datas.userFeature.salary <= 6000) ? 'active': '']">
-                                    3000-6000
+                                <li :class="[(user_datas.userFeature.salary >= 3500 && user_datas.userFeature.salary < 8000) ? 'active': '']">
+                                    3500-8000
                                 </li>
-                                <li :class="[(user_datas.userFeature.salary > 6000 && user_datas.userFeature.salary <= 10000) ? 'active' : '']">
-                                    6001-10000
+                                <li :class="[(user_datas.userFeature.salary >= 8000 && user_datas.userFeature.salary < 10000) ? 'active' : '']">
+                                   8000-10000
                                 </li>
-                                <li :class="[(user_datas.userFeature.salary > 10000 && user_datas.userFeature.salary <= 15000) ? 'active' : '']">
-                                    10001-15000
+                                <li :class="[(user_datas.userFeature.salary >= 10000 && user_datas.userFeature.salary < 15000) ? 'active' : '']">
+                                    10000-15000
                                 </li>
-                                <li :class="[user_datas.userFeature.salary > 15000 ? 'active' : '']">
+                                <li :class="[user_datas.userFeature.salary >= 15000 ? 'active' : '']">
                                     15000以上
                                 </li>
                             </ul>
@@ -136,7 +133,7 @@
         font-size: 13px;
         height: 30px;
         line-height: 30px;
-        width: 90px;
+        width: 120px;
         text-align: center;
         color: #48576a;
     }
