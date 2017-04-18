@@ -65,6 +65,32 @@ const user1 = {
             { value: 800, name: '小米' },
             { value: 600, name: '其它' }
         ]
+    },
+    "serviceBehavior": {
+        "legend": ["联想服务网站", "电话服务", "现场服务", "微信公众号"],
+        "data": [3, 1, 0, 1]
+    },
+    "mediaPreference": {
+        "legend": [
+            { text: '搜索引擎', max: 6500},
+            { text: '贴吧', max: 16000},
+            { text: '微博', max: 30000},
+            { text: '微信', max: 38000},
+            { text: '邮箱', max: 52000},
+            { text: '其他', max: 25000}
+        ],
+        "data": [4300, 10000, 28000, 35000, 50000, 19000]
+    },
+    "consumePreference": {
+        "legend": [
+            { text: 'IT数码', max: 6500},
+            { text: '旅游', max: 10000},
+            { text: '家居', max: 3000},
+            { text: '时尚', max: 8000},
+            { text: '服装', max: 5000},
+            { text: '医疗', max: 1000}
+        ],
+        "data": [5500, 8000, 2000, 4600, 2700, 800]
     }
 };
 
@@ -133,6 +159,32 @@ const user2 = {
             { value: 800, name: '小米' },
             { value: 600, name: '其它' }
         ]
+    },
+    "serviceBehavior": {
+        "legend": ["联想服务网站", "电话服务", "现场服务", "微信公众号"],
+        "data": [3, 1, 0, 2]
+    },
+    "mediaPreference": {
+        "legend": [
+            { text: '搜索引擎', max: 6500},
+            { text: '贴吧', max: 16000},
+            { text: '微博', max: 30000},
+            { text: '微信', max: 38000},
+            { text: '邮箱', max: 52000},
+            { text: '其他', max: 25000}
+        ],
+        "data": [4300, 10000, 28000, 35000, 50000, 19000]
+    },
+    "consumePreference": {
+        "legend": [
+            { text: 'IT数码', max: 6500},
+            { text: '旅游', max: 10000},
+            { text: '家居', max: 3000},
+            { text: '时尚', max: 8000},
+            { text: '服装', max: 5000},
+            { text: '医疗', max: 1000}
+        ],
+        "data": [5500, 8000, 2000, 4600, 2700, 800]
     }
 };
 

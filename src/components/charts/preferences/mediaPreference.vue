@@ -37,14 +37,7 @@
                 center: ['50%', '50%'],
                 radar: {
                     // shape: 'circle',
-                    indicator: [
-                       { text: '搜索引擎', max: 6500},
-                       { text: '贴吧', max: 16000},
-                       { text: '微博', max: 30000},
-                       { text: '微信', max: 38000},
-                       { text: '邮箱', max: 52000},
-                       { text: '其他', max: 25000}
-                    ],
+                    indicator: this.user_datas.mediaPreference.legend,
                     radius: 100,      
                     startAngle: 120,   // 改变雷达图的旋转度数
                 },
@@ -64,7 +57,7 @@
                     // areaStyle: {normal: {}},
                     data: [
                         {
-                            value: [4300, 10000, 28000, 35000, 50000, 19000],
+                            value: this.user_datas.mediaPreference.data,
                             name: '社交偏好',
                             label: {
                                 normal: {

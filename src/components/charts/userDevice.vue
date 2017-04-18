@@ -53,7 +53,11 @@
                                     show: true,  
                                     position:'outer',  
                                     formatter: "{b}"  
-                                }   
+                                },
+                                color: function(params) {
+                                var colorList = ['#A8D76F', '#F8D347'];
+                                return colorList[params.dataIndex];
+                            }
                           }  
                         },  
                         radius: ['40%', '60%'],

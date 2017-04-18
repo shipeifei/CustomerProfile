@@ -37,14 +37,7 @@
                 center: ['50%', '50%'],
                 radar: {
                     // shape: 'circle',
-                    indicator: [
-                       { text: 'IT数码', max: 6500},
-                       { text: '旅游', max: 10000},
-                       { text: '家居', max: 3000},
-                       { text: '时尚', max: 8000},
-                       { text: '服装', max: 5000},
-                       { text: '医疗', max: 1000}
-                    ],
+                    indicator: this.user_datas.consumePreference.legend,
                     radius: 100,      
                     startAngle: 120,   // 改变雷达图的旋转度数
                 },
@@ -64,7 +57,7 @@
                     // areaStyle: {normal: {}},
                     data: [
                         {
-                            value: [5500, 8000, 2000, 4600, 2700, 800],
+                            value: this.user_datas.consumePreference.data,
                             name: '消费偏好',
                             label: {
                                 normal: {

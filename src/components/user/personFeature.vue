@@ -2,7 +2,7 @@
     <el-collapse v-model="activeNames">
         <el-collapse-item title="基本信息" name="1">
             <el-row>
-                <el-col :md="18">
+                <el-col :md="16">
                     <user-info></user-info>
                     <div class="basic_info">
                         <el-form label-width="60px" v-if="user_datas.userFeature">
@@ -73,20 +73,19 @@
                         </el-form>
                     </div>
                 </el-col>
-                <el-col :md="6">
-                    <img v-if="user_datas.userFeature.sex === '男'" src="../../assets/images/wordArtBoy.png" alt=""></img>
-                    <img v-else src="../../assets/images/wordArtGirl.png" alt=""></img>
+                <el-col :md="8">
+                    <user-map></user-map>
                 </el-col>
             </el-row>
             <el-row style="margin-top: 50px;">
-                <el-col :md="6">
+                <el-col :md="8">
                     <user-device></user-device>
                 </el-col>
                 <el-col :md="8">
                     <phone-model></phone-model>
                 </el-col>
                 <el-col :md="8">
-                    <user-map></user-map>
+                    
                 </el-col>
             </el-row>
         </el-collapse-item>

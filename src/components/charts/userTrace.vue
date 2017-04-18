@@ -192,14 +192,14 @@
             
     .history-date ul li dl span{
         display: block;
-        font-size:20px;
-        padding: 9px 9px 9px 29px;
-        color:#fff;
+        font-size: 20px;
+        padding: 2px 9px 9px 29px;
+        color: #fff;
     }
             
     .history-date h2 a.right {
         margin: 15px 317px 0 0;
         +margin: 15px 600px 0 0;
-        float:right;
+        float: right;
     }
 </style>

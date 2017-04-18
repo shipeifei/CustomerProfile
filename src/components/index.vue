@@ -77,15 +77,10 @@
     .chart-container {
         width: 100%;
         height: 100%;
-        min-width: 300px;
+        // min-width: 300px;
         min-height: 300px;
-        max-width: 330px;
-        max-height: 330px;
-
-        &.large-chart-container {
-            max-width: 660px;
-            max-height: 660px;
-        }
+        // max-width: 330px;
+        // max-height: 330px;
     }
 </style>
 <style lang="less" scoped>
