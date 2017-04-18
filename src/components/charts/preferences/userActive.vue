@@ -161,7 +161,7 @@
     height: 150px;
     padding-left: 20px;
     position: absolute;
-    left: 59px;
+    left: 69px;
     /* margin-left: 50px; */
             }
         }
