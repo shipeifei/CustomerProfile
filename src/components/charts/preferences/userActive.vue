@@ -49,55 +49,71 @@
             };
 
             let option = {
-                legend: {
-                    data:['App','论坛','商城','设备'],
-                    align: 'left',
-                    left: 10
+                title: {
+                    text: ''
                 },
-                tooltip: {},
-                xAxis: {
-                    data: xAxisData,
-                    axisTick: {
-                        alignWithLabel: true
-                    },
-                    axisLabel:{
-                        interval:0
+                tooltip : {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'cross',
+                        label: {
+                            backgroundColor: '#6a7985'
+                        }
                     }
                 },
-                yAxis: {
+                legend: {
+                    data:['App','论坛','商城','设备']
                 },
+            
                 grid: {
-                    left: 100
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
                 },
-                
-                series: [
+                xAxis : [
                     {
-                        name: 'App',
-                        type: 'bar',
+                        type : 'category',
+                        boundaryGap : false,
+                        data : xAxisData
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value',
+                        boundaryGap:true,
+                        axisTick: {
+                          show:false,
+                          alignWithLabel:true,
+                          inside:false
+                        }
+                    }
+                ],
+                series : [
+                    {
+                        name:'App',
+                        type:'line',
                         stack: '总量',
-                        itemStyle: itemStyle,
-                        data: data1
+                       
+                        data:data1
                     },
                     {
-                        name: '论坛',
-                        type: 'bar',
+                        name:'论坛',
+                        type:'line',
                         stack: '总量',
-                        itemStyle: itemStyle,
-                        data: data2
+                        data:data2
                     },
                     {
-                        name: '商城',
-                        type: 'bar',
+                        name:'商城',
+                        type:'line',
                         stack: '总量',
-                        itemStyle: itemStyle,
-                        data: data3
+                        data:data3
                     },
                     {
-                        name: '设备',
-                        type: 'bar',
+                        name:'设备',
+                        type:'line',
                         stack: '总量',
-                        itemStyle: itemStyle,
-                        data: data4
+                        data:data4
                     }
                 ]
             };

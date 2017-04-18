@@ -87,7 +87,7 @@
                 </el-col>
             </el-row>
             <el-row>
-                <el-col :md="24">
+                <el-col :md="18">
                     <user-map></user-map>
                 </el-col>
                 

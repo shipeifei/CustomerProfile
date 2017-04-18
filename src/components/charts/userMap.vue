@@ -1,6 +1,24 @@
 <template>
-<div id="user-map-chart-container" style="width: 100%; height: 100%; min-width: 500px; min-height: 500px;"></div>
+    <div class="user-map-container">
+        <div id="user-map-chart-container" style="width: 100%; height: 100%; min-width: 500px; min-height: 500px;"></div>
+    </div>
+    <div class="top-city">
+        <ul>
+            <li>
+                <span>北京</span>
+                <el-button type="primary"></el-button>
+            </li>
+            <li><span>重庆</span>
+                <el-button type="success"></el-button>
+            </li>
+            <li><span>河南</span>
+                <el-button type="warning"></el-button>
+            </li>
+        </ul>
+    </div>
+    </div>
 </template>
+
 <script type="text/babel">
     import $ from 'jquery'
     import localforage from 'localforage'
@@ -34,7 +52,8 @@
             let option = {
                 title: {
                     text: '',
-                    left: 'center'
+                    left: 'right',
+                    top:'middle'
                 },
                 tooltip: {
                     trigger: 'item',
@@ -42,10 +61,10 @@
                     //textStyle:{color:"#fff"} //提示标签字体颜色
                 },
                 legend: {
-                    show: false,
+                    show: true,
                     orient: 'vertical',
-                    left: 'left',
-                    data:['position']
+                    left: 'top',
+                    data:['重庆','北京','河北']
                 },
                 visualMap: {
                     show:false,
@@ -58,7 +77,7 @@
                     text: ['高','低'],           // 文本，默认为数值文本
                     calculable: true,
                     inRange: {
-                        color: ['#d94e5d','#eac736','#50a3ba'].reverse()
+                        color: ['#20a0ff','#13ce66','#f9c855'].reverse()
                     }
                 },
                 series: [
@@ -66,7 +85,7 @@
                         name: 'position',
                         type: 'map',
                         mapType: 'china',
-                        showLegendSymbol: false,
+                        showLegendSymbol: true,
                         roam: false,
                         label: {
                             normal: {
@@ -95,10 +114,9 @@
                             {name: '北京',value: 30000 },
                             {name: '天津',value: 10000 },
                             {name: '上海',value: 1000 },
-                            {name: '重庆',value: 30227.92 },
+                            {name: '重庆',value: 25000.92 },
                             {name: '河北',value: 20000.92 },
                             {name: '河南',value: 806.98 }
-                        
                         ]
                     }
                 ]
@@ -108,3 +126,34 @@
         }
     }
 </script>
+
+<style lang="less" scoped >
+    .user-map-container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .top-city{
+            position: absolute;
+            right: 15%;
+            top:40%;
+            ul{
+                list-style: none;
+                li{
+                    height: 20px;
+                    line-height: 20px;
+                    margin-bottom: 5px;
+                    span{
+                        display: inline-block;
+                        margin-right: 5px;                   
+                         font-size: 12px;
+                         line-height: 15px;
+                    }
+                    .el-button{
+                        padding: 5px 10px !important;
+                    }
+
+                }
+            }
+        }
+    }
+</style>
