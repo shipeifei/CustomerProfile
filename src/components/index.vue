@@ -1,12 +1,5 @@
 <template>
-   <div class="user-container">
-    <div class="toggle-menu" v-if="user_datas">
-        <el-button-group>
-            <el-button @click="changeMenu(0)" :class="{'active': menuIndex === 0}"><i class="el-icon-date"></i>概况</el-button>
-            <el-button @click="changeMenu(1)" :class="{'active': menuIndex === 1}"><i class="el-icon-menu"></i>详情</el-button>
-            <el-button @click="changeMenu(2)" :class="{'active': menuIndex === 2}"><i class="el-icon-menu"></i>详情2</el-button>
-        </el-button-group>
-    </div>
+    <div class="user-container">
     <!-- <el-breadcrumb separator="/">
             <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
             <el-breadcrumb-item>用户轨迹跟踪</el-breadcrumb-item>
@@ -19,10 +12,7 @@
                 </div>
                 <!--个人属性-->
                 <div class="user-search-result" v-if="user_datas">
-                    <div class="person-basic" v-if="menuIndex === 0">
-                        <!--<div class="user-info">
-                            <user-info ></user-info>
-                        </div>-->
+                    <div class="person-basic">
                         <div class="person-feature">
                             <person-feature></person-feature>
                         </div>
@@ -32,17 +22,12 @@
                         <div class="person-active">
                             <person-active></person-active>
                         </div>
-                    </div>
-                    <div class="person-detail" v-if="menuIndex === 1">
                         <div class="person-preference">
                             <person-preference></person-preference>
                         </div>
                         <div class="action-featur">
                             <action-feature></action-feature>
                         </div>
-                    </div>
-                    <div class="person-detail2" v-if="menuIndex === 2">
-                        <user-detail></user-detail>
                     </div>
                 </div>
             </section>
@@ -54,32 +39,27 @@
 <script type="text/babel">
     import $ from 'jquery'
     import localforage from 'localforage'
-    import userInfo from '@/components/user/userInfo.vue'
     import userSearch from '@/components/user/userSearch.vue'
     import personFeature from '@/components/user/personFeature.vue'
     import personTrace from '@/components/user/personTrace.vue'
     import personActive from '@/components/user/personActive.vue'
     import actionFeature from '@/components/user/actionFeature.vue'
     import personPreference from '@/components/user/personPreference.vue'
-    import userDetail from '@/components/user/userDetail/index.vue'
     import { mapGetters } from 'vuex'
     var echarts = require('echarts');
     export default {
           name: 'index',
           components: {
-            'userInfo': userInfo,
             'personFeature': personFeature,
             'personTrace': personTrace,
             'actionFeature': actionFeature,
             'userSearch': userSearch,
             'personPreference': personPreference,
-            'userDetail': userDetail,
             'personActive':personActive
           },
         data() {
             return {
-               labelPosition: 'right',
-               menuIndex: 0
+               labelPosition: 'right'
             }
         },
         computed: {
@@ -93,9 +73,6 @@
         mounted() {
         },
         methods: {
-            changeMenu (menuIndex) {
-              this.menuIndex = menuIndex;
-            }
         }
     }
 </script>
@@ -151,7 +128,7 @@
       }
     }
     .box-card{
-      margin-top: 30px;
+      margin-top: 20px;
     }
     .user-container-wrapper{
       .user-search-result{

@@ -19,14 +19,6 @@
                                     <el-col :md="8">
                                         <service-behavior></service-behavior>
                                     </el-col>
-                                    <el-col :md="8">
-                                      <phone-behavior></phone-behavior>
-                                    </el-col>
-                                </el-row>
-                                <el-row style="padding-top: 50px;">
-                                    <el-col :md="8">
-                                        <download-behavior></download-behavior>
-                                    </el-col>
                                 </el-row>
                             </div>
                 </el-card>
