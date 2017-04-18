@@ -79,7 +79,7 @@
                       //           }   
                       //     }  
                       // },  
-                        radius: ['40%', '70%'],
+                        radius: ['40%', '60%'],
                         data: this.user_datas.phoneModel.series
                     }
                 ]

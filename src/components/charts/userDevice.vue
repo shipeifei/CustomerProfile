@@ -52,11 +52,11 @@
                                 label:{  
                                     show: true,  
                                     position:'outer',  
-                                    formatter: "{b} : {d}%"  
+                                    formatter: "{b}"  
                                 }   
                           }  
                         },  
-                        radius: ['40%', '70%'],
+                        radius: ['40%', '60%'],
                         data:this.user_datas.userDevice.series
                     }
                 ]

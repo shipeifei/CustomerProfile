@@ -78,7 +78,7 @@
                 </el-col>
 
             </el-row>
-            <el-row>
+            <el-row style="margin-top: 50px;">
                 <el-col :md="8">
                     <user-device></user-device>
                 </el-col>
