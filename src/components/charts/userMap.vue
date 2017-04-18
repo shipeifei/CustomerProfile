@@ -1,7 +1,6 @@
 <template>
     <div class="user-map-container">
-        <div id="user-map-chart-container" style="width: 100%; height: 100%; min-width: 500px; min-height: 500px;"></div>
-    </div>
+    <div id="user-map-chart-container" style="width: 100%; height: 100%; min-width: 500px; min-height: 500px;"></div>
     <div class="top-city">
         <ul>
             <li>
