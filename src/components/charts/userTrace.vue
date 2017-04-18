@@ -1,58 +1,29 @@
 <template>
 <div>
   <div class="history">
-   <div class="history-date">
+   <div class="history-date" v-for="y in user_datas.userTrace">
       <div class="year">
-        <div>2016年</div>
+        <div>{{y.year}}年</div>
       </div>
       <ul>
-        <li class="right">
-          <h3>07.01<span>2016</span></h3>
-          <dl>
-            <span>第一次回帖</span>
-          </dl>
-        </li>
-        <li class="left">
-          <dl>
-            <span>首次购买产品</span>
-          </dl>
-          <h3>09.01<span>2016</span></h3>
-        </li>
-        <li class="right">
-          <h3>10.08<span>2016</span></h3>
-          <dl>
-            <span>联想商店应用下载达到50个</span>
-          </dl>
-        </li>
-        <li class="left">
-          <dl>
-            <span>消费达到10K</span>
-          </dl>
-          <h3>12.12<span>2016</span></h3>
-        </li>
-      </ul>
-    </div>
-    <div class="history-date">
-      <div class="year">
-        <div>2017年</div>
-      </div>
-      <ul>
-        <li class="right">
-          <h3>02.11<span>2017</span></h3>
-          <dl>
-            <span>第二次发帖</span>
-          </dl>
-        </li>
-        <li class="left">
-          <dl>
-            <span>首次接受联想服务</span>
-          </dl>
-          <h3>03.18<span>2017</span></h3>
+        <li :class="[index % 2 == 0 ? 'right' : 'left']" v-for="(e, index) in y.events">
+          <template v-if="index % 2 == 0">
+            <h3>{{e.date}}<span>{{y.year}}</span></h3>
+            <dl>
+                <span>{{e.event}}</span>
+            </dl>
+          </template>
+          <template v-else>
+            <dl>
+                <span>{{e.event}}</span>
+            </dl>
+            <h3>{{e.date}}<span>{{y.year}}</span></h3>
+          </template>
         </li>
       </ul>
     </div>
   </div>
-  </div>
+</div>
 </template>
 <script type="text/babel">
     import $ from 'jquery'
@@ -81,9 +52,6 @@
         methods: {
         },
         mounted() {
-            $(".history").eq(0).animate({
-                height: '900px'
-            }, 1500);
         }
     }
 </script>
@@ -93,7 +61,6 @@
         background: url(../../assets/images/timeline/line4.png) repeat-y 50% 0;
         overflow: hidden;
         position: relative;
-        height: 100px;
     }
             
     .history-date {

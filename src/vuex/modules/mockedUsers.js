@@ -88,7 +88,55 @@ const user1 = {
             { text: '医疗', max: 1000}
         ],
         "data": [5500, 8000, 2000, 4600, 2700, 800]
-    }
+    },
+    "userTrace": [
+        {
+            year: 2016,
+            events: [
+{
+                    date: "01-05",
+                    event: "首次下载应用"
+                },
+                {
+                    date: "02-01",
+                    event: "注册Lenovo ID"
+                },
+                {
+                    date: "02-01",
+                    event: "首次登陆"
+                },
+                {
+                    date: "03-18",
+                    event: "首次发帖"
+                },
+                {
+                    date: "04-01",
+                    event: "首次购买"
+                },
+                {
+                    date: "12-30",
+                    event: "首次使用联想服务"
+                }
+            ]
+        },
+        {
+            year: 2017,
+            events: [
+                {
+                    date: "02-11",
+                    event: "最新发帖"
+                },
+                {
+                    date: "03-18",
+                    event: "最新购买"
+                },
+                {
+                    date: "03-18",
+                    event: "最新下载"
+                }
+            ]
+        }
+    ]
 };
 
 const user2 = {
@@ -179,7 +227,55 @@ const user2 = {
             { text: '医疗', max: 1000}
         ],
         "data": [5500, 8000, 2000, 4600, 2700, 800]
-    }
+    },
+    "userTrace": [
+        {
+            year: 2016,
+            events: [
+                {
+                    date: "01-05",
+                    event: "首次下载应用"
+                },
+                {
+                    date: "02-01",
+                    event: "注册Lenovo ID"
+                },
+                {
+                    date: "02-01",
+                    event: "首次登陆"
+                },
+                {
+                    date: "03-18",
+                    event: "首次发帖"
+                },
+                {
+                    date: "04-01",
+                    event: "首次购买"
+                },
+                {
+                    date: "12-30",
+                    event: "首次使用联想服务"
+                }
+            ]
+        },
+        {
+            year: 2017,
+            events: [
+                {
+                    date: "02-11",
+                    event: "最新发帖"
+                },
+                {
+                    date: "03-18",
+                    event: "最新购买"
+                },
+                {
+                    date: "03-18",
+                    event: "最新下载"
+                }
+            ]
+        }
+    ]
 };
 
 export default [user1, user2];
