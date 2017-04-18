@@ -121,7 +121,7 @@
       font-weight: bold !important;
       font-size: 16px !important;
     }
-    .el-input {
+    .el-autocomplete {
       width: 400px;
     }
   }
