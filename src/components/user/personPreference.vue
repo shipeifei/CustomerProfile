@@ -1,9 +1,6 @@
 <template>
-    <el-card class="box-card">
-        <div slot="header" class="clearfix">
-            <span style="line-height: 30px;">用户详情</span>
-        </div>
-        <div class="userProp">
+    <el-collapse v-model="activeNames">
+        <el-collapse-item title="用户详情" name="1">
             <el-row>
                 <el-col :md="8">
                     <media-preference></media-preference>
@@ -12,8 +9,8 @@
                     <consume-preference></consume-preference>
                 </el-col>
             </el-row>
-        </div>
-    </el-card>
+        </el-collapse-item>
+    </el-collapse>
 </template>
 
 
@@ -30,6 +27,11 @@
             'mediaPreference': mediaPreference,
             'consumePreference':consumePreference
           },
+          data() {
+            return {
+                activeNames: ['1']
+            };
+        },
         computed: {
             ...mapGetters({
                 home_datas: 'home_datas',

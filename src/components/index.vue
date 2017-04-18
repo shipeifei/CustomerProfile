@@ -143,4 +143,8 @@
   .user-search-container {
       text-align: center;
   }
+
+  .el-collapse {
+      margin-top: 20px;
+  }
 </style>

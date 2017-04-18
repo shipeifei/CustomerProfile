@@ -1,9 +1,6 @@
 <template>
-    <el-card class="box-card">
-        <div slot="header" class="clearfix">
-            <span style="line-height: 30px;">基本信息</span>
-        </div>
-        <div class="userProp">
+    <el-collapse v-model="activeNames">
+        <el-collapse-item title="基本信息" name="1">
             <el-row>
                 <el-col :md="18">
                     <user-info></user-info>
@@ -92,8 +89,8 @@
                     <user-map></user-map>
                 </el-col>
             </el-row>
-        </div>
-    </el-card>
+        </el-collapse-item>
+    </el-collapse>
 </template>
 
 <script type="text/babel">
@@ -112,6 +109,11 @@
             'userMap': userMap,
             'phoneModel': phoneModel,
             'userInfo': userInfo
+          },
+          data() {
+              return {
+                  activeNames: ['1']
+              }
           },
         computed: {
             ...mapGetters({

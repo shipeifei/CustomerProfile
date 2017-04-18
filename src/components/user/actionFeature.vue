@@ -1,27 +1,24 @@
 <template>
-                <el-card class="box-card">
-                    <div slot="header" class="clearfix">
-                        <span style="line-height: 30px;">行为属性</span>
-                    </div>
-                            <div class="userProp">
-                                <el-row>
-                                    <el-col :md="16">
-                                        <pc-behavior></pc-behavior>
-                                   </el-col>
-                                    <el-col :md="8">
-                                        <mall-behavior></mall-behavior>
-                                   </el-col>
-                                </el-row>
-                                <el-row style="padding-top: 50px;">
-                                    <el-col :md="8">
-                                      <community-behavior></community-behavior>
-                                    </el-col>
-                                    <el-col :md="8">
-                                        <service-behavior></service-behavior>
-                                    </el-col>
-                                </el-row>
-                            </div>
-                </el-card>
+    <el-collapse v-model="activeNames">
+        <el-collapse-item title="行为属性" name="1">
+            <el-row>
+                <el-col :md="16">
+                    <pc-behavior></pc-behavior>
+                </el-col>
+                <el-col :md="8">
+                    <mall-behavior></mall-behavior>
+                </el-col>
+            </el-row>
+            <el-row style="padding-top: 50px;">
+                <el-col :md="8">
+                    <community-behavior></community-behavior>
+                </el-col>
+                <el-col :md="8">
+                    <service-behavior></service-behavior>
+                </el-col>
+            </el-row>
+        </el-collapse-item>
+    </el-collapse>
 </template>
 
 <script type="text/babel">
@@ -50,6 +47,11 @@
                 home_datas: 'home_datas',
                 user_datas: 'user_datas'
             })
+        },
+        data() {
+            return {
+                activeNames: ['1']
+            };
         },
         created () {
             //this.$store.dispatch('getHomeInfo')

@@ -1,12 +1,9 @@
 <template>
-    <el-card class="box-card">
-        <div slot="header" class="clearfix">
-            <span style="line-height: 30px;">轨迹</span>
-        </div>
-        <div class="userProp">
+    <el-collapse v-model="activeNames">
+        <el-collapse-item title="轨迹" name="1">
             <user-trace></user-trace>
-        </div>
-    </el-card>
+        </el-collapse-item>
+    </el-collapse>
 </template>
 
 <script type="text/babel">
@@ -18,6 +15,11 @@
         name: 'personFeature',
         components: {
             'userTrace': userTrace
+        },
+        data() {
+            return {
+                activeNames: ['1']
+            };
         },
         computed: {
             ...mapGetters({

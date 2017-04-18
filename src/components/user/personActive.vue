@@ -1,12 +1,9 @@
 <template>
-    <el-card class="box-card">
-        <div slot="header" class="clearfix">
-            <span style="line-height: 30px;">用户活跃度</span>
-        </div>
-        <div class="userProp">
+    <el-collapse v-model="activeNames">
+        <el-collapse-item title="用户活跃度" name="1">
             <user-active></user-active>
-        </div>
-    </el-card>
+        </el-collapse-item>
+    </el-collapse>
 </template>
 
 <script type="text/babel">
@@ -18,6 +15,11 @@
         name: 'personFeature',
         components: {
             'userActive': userActive
+        },
+        data() {
+            return {
+                activeNames: ['1']
+            };
         },
         computed: {
             ...mapGetters({
