@@ -25,12 +25,6 @@
                         <div class="person-active">
                             <person-active></person-active>
                         </div>
-
-                    </div>
-                    <div class="person-detail" v-if="menuIndex === 1">
-                        <div class="person-preference">
-                            <person-preference></person-preference>
-                        </div>
                         <div class="action-feature">
                             <action-feature></action-feature>
                         </div>
