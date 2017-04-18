@@ -21,9 +21,9 @@
                 <div class="user-search-result" v-if="user_datas">
                     <h2>查询结果</h2>
                     <div class="person-basic" v-if="menuIndex === 0">
-                        <div class="user-info">
+                        <!--<div class="user-info">
                             <user-info ></user-info>
-                        </div>
+                        </div>-->
                         <div class="person-feature">
                             <person-feature></person-feature>
                         </div>
@@ -106,8 +106,13 @@
         height: 100%;
         min-width: 300px;
         min-height: 300px;
-        max-width: 400px;
-        max-height: 400px;
+        max-width: 330px;
+        max-height: 330px;
+
+        &.large-chart-container {
+            max-width: 660px;
+            max-height: 660px;
+        }
     }
 </style>
 <style lang="less" scoped>
@@ -135,6 +140,7 @@
     min-height: 800px;
     .toggle-menu{
       position: absolute;
+      z-index: 100000;
       top: 10px;
       right: 5px;
       .active{

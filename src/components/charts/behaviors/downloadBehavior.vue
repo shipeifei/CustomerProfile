@@ -1,6 +1,6 @@
 
 <template>
-<div id="download-behavior-chart-container" style="width:500px;height:400px"></div>
+<div id="download-behavior-chart-container" class="chart-container"></div>
 </template>
 <script type="text/babel">
     import $ from 'jquery'

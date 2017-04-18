@@ -7,7 +7,7 @@ import Mock from 'mockjs'
 import mockedUsers from './mockedUsers'
 
 Mock.setup({
-    timeout: 3000
+    timeout: 500
 })
 Mock.mock('http://www.baidu.com/user', mockedUsers);
 const state = {

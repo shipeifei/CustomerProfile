@@ -5,30 +5,28 @@
                     </div>
                             <div class="userProp">
                                 <el-row>
-                                    <el-col :md="24">
+                                    <el-col :md="16">
                                         <pc-behavior></pc-behavior>
                                    </el-col>
-                                </el-row>
-                                <el-row style="padding-top: 50px;">
-                                    <el-col :md="12">
+                                    <el-col :md="8">
                                         <mall-behavior></mall-behavior>
                                    </el-col>
-                                    <el-col :md="12">
-                                      <community-behavior></community-behavior>
-                                    </el-col>
                                 </el-row>
                                 <el-row style="padding-top: 50px;">
-                                    <el-col :md="12">
+                                    <el-col :md="8">
+                                      <community-behavior></community-behavior>
+                                    </el-col>
+                                    <el-col :md="8">
                                         <service-behavior></service-behavior>
                                     </el-col>
-                                    <el-col :md="12">
+                                    <el-col :md="8">
                                       <phone-behavior></phone-behavior>
                                     </el-col>
                                 </el-row>
                                 <el-row style="padding-top: 50px;">
-                                   <el-col :md="24">
+                                    <el-col :md="8">
                                         <download-behavior></download-behavior>
-                                   </el-col>
+                                    </el-col>
                                 </el-row>
                             </div>
                 </el-card>

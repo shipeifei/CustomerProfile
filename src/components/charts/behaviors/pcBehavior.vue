@@ -1,5 +1,5 @@
 <template>
-<div id="pc-behavior-chart-container" style="width:100%;height:400px"></div>
+<div id="pc-behavior-chart-container" class="chart-container large-chart-container"></div>
 </template>
 <script type="text/babel">
     import $ from 'jquery'
