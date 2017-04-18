@@ -90,12 +90,8 @@
           },
           loadAll() {
             return [
-              { "value": "testLenovoID2" },
-              { "value": "testLenovoID" },
               { "value": "18911004567" },
-              { "value": "test@163.com" },
-              { "value": "13916053476" },
-              { "value": "admin@lenovo.com"}
+              { "value": "13916053476" }
             ];
           },
           handleSelect(item) {
