@@ -1,6 +1,5 @@
 <template>
     <section class="user-search" v-loading.fullscreen.lock="fullscreenLoading" element-loading-text="拼命加载中">
-        <h2>用户查询</h2>
         <div class="search-block">
             <el-form :model="userValidateForm" :inline="true" ref="userValidateForm">
                <!--  <el-form-item prop="userName" :rules="[
@@ -111,11 +110,6 @@
 
 <style lang="less" scoped>
 .user-search {
-  h2 {
-        font-weight: 400;
-        color: #1f2f3d;
-        margin: 0;
-  }
   .search-block {
         border-radius: 4px;
         transition: .2s;
