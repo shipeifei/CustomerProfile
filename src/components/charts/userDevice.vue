@@ -1,9 +1,7 @@
 <template>
-<div id="user-device-chart-container" style="width:100%;height:400px"></div>
+<div id="user-device-chart-container" class="chart-container"></div>
 </template>
 <script type="text/babel">
-    import $ from 'jquery'
-    import localforage from 'localforage'
     import { mapGetters } from 'vuex'
     var echarts = require('echarts');
     export default {
@@ -32,21 +30,20 @@
             this.chart.setOption({
                 title: {
                     text: '设备接入',
-                    x:'center'
+                    x: 'center'
                 },
                 tooltip: {
                     trigger: 'item',
                     formatter: "{a} <br/>{b} : {c} ({d}%)"
                 },
                 legend: {
-                    orient : 'vertical',
-                    x : 'right',
-                    y : 'center',
-                    data:this.user_datas.userDevice.legend
+                    orient: 'vertical',
+                    x: 'right',
+                    y: 'center',
+                    data: this.user_datas.userDevice.legend
                 },
-                
-                calculable : true,
-                series : [
+                calculable: true,
+                series: [
                     {
                         name:'设备接入',
                         type:'pie',

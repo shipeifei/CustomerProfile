@@ -1,5 +1,5 @@
 <template>
-<div id="phone-model-container" style="width:100%;height:400px"></div>
+<div id="phone-model-container" class="chart-container"></div>
 </template>
 <script type="text/babel">
     import $ from 'jquery'

@@ -65,20 +65,26 @@
     }
 </script>
 
-<style lang="less" scoped >
-.user-search{
-      h2 {
+<style lang="less" scoped>
+.user-search {
+  h2 {
         font-weight: 400;
         color: #1f2f3d;
-      }
-      p{
+        margin: 0;
+  }
+  p {
         font-size: 14px;
         color:#5e6d82;
         line-height: 1.5em;
-      }
-      .search-block{
+        margin: 5px 0;
+  }
+  .search-block {
         border-radius: 4px;
         transition: .2s;
-      }
-    }
+  }
+
+  .el-form-item {
+    margin-bottom: 0;
+  }
+}
 </style>

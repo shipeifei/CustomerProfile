@@ -12,16 +12,18 @@
             <el-breadcrumb-item>用户轨迹跟踪</el-breadcrumb-item>
         </el-breadcrumb> -->
     <el-row>
-        <el-col :md="6">
-            <user-info ></user-info>
-        </el-col>
-        <el-col :md="18" >
+        <el-col :md="24" >
             <section class="user-container-wrapper">
-                <user-search></user-search>
+                <div class="user-search-container">
+                    <user-search></user-search>
+                </div>
                 <!--个人属性-->
                 <div class="user-search-result" v-if="user_datas">
                     <h2>查询结果</h2>
                     <div class="person-basic" v-if="menuIndex === 0">
+                        <div class="user-info">
+                            <user-info ></user-info>
+                        </div>
                         <div class="person-feature">
                             <person-feature></person-feature>
                         </div>
@@ -48,11 +50,7 @@
         </el-col>
     </el-row>
 </div>
-
-
 </template>
-
-
 
 <script type="text/babel">
     import $ from 'jquery'
@@ -102,7 +100,16 @@
         }
     }
 </script>
-
+<style lang="less">
+    .chart-container {
+        width: 100%;
+        height: 100%;
+        min-width: 300px;
+        min-height: 300px;
+        max-width: 400px;
+        max-height: 400px;
+    }
+</style>
 <style lang="less" scoped>
   .text {
     font-size: 14px;
@@ -123,9 +130,8 @@
 
   .user-container{
     position: relative;
-    margin-top: 5px;
     background-color: #ffffff;
-    padding: 40px;
+    padding: 10px 40px;
     min-height: 800px;
     .toggle-menu{
       position: absolute;
@@ -150,5 +156,9 @@
         }
       }
     }
+  }
+
+  .user-search-container {
+      text-align: center;
   }
 </style>

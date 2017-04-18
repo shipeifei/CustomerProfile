@@ -79,18 +79,15 @@
 
             </el-row>
             <el-row>
-                <el-col :md="12">
+                <el-col :md="8">
                     <user-device></user-device>
                 </el-col>
-                <el-col :md="12">
+                <el-col :md="8">
                     <phone-model></phone-model>
                 </el-col>
-            </el-row>
-            <el-row>
-                <el-col :md="18">
+                <el-col :md="8">
                     <user-map></user-map>
                 </el-col>
-                
             </el-row>
         </div>
     </el-card>

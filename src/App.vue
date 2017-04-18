@@ -53,14 +53,3 @@ body {
   }
 }
 </style>
-
-<style lang="less" scoped>
-#app-container {
-    .wrapper{
-        margin-top: 20px;
-        .wrapper-right{
-         padding-right: 20px;
-      }
-    }
-}
-</style>
