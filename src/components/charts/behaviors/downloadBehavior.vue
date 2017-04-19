@@ -1,6 +1,11 @@
 
 <template>
-<div id="download-behavior-chart-container" class="chart-container"></div>
+<div>
+    <div style="font-size: 18px; font-weight: bold; text-align: center;">
+        应用
+    </div>
+    <div id="download-behavior-chart-container" class="chart-container" style="margin-top: -62px;"></div>
+</div>
 </template>
 <script type="text/babel">
     import $ from 'jquery'
@@ -23,7 +28,7 @@
             var myChart = echarts.init(document.getElementById('download-behavior-chart-container'));
            let option = {
                 title: {
-                    text: '应用',
+                    text: '',
                     x:'center'
                 },
                 tooltip: {

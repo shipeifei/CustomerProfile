@@ -26,6 +26,7 @@
     import localforage from 'localforage'
     import Vue from 'vue'
     import { mapGetters } from 'vuex'
+    import users from '@/vuex/modules/mockedUsers'
 
     Vue.component('my-item-zh', {
       functional: true,
@@ -93,10 +94,7 @@
             };
           },
           loadAll() {
-            return [
-              { "value": "18911004567" },
-              { "value": "13916053476" }
-            ];
+            return users.map(user => ({value: user.userBaseInfo.phone}));
           },
           handleSelect(item) {
              this.serchClick();             
