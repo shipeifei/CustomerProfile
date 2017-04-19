@@ -50,10 +50,10 @@
   </el-col>
   <el-col :md="14" >
     <el-menu  :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-      <el-menu-item index="1">
+      <!-- <el-menu-item index="1">
       <i class="icon tiezi"></i>
       用户轨迹跟踪
-      </el-menu-item>
+      </el-menu-item> -->
       <!-- <el-menu-item index="2">
         <i class="icon shengcheng"></i>
         生成报告

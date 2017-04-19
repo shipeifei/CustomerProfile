@@ -7,6 +7,7 @@
     import localforage from 'localforage'
     import { mapGetters } from 'vuex'
     var echarts = require('echarts');
+    import {colorsFunc} from '../../../colors'
     export default {
           name: 'downloadBehavior',
         computed: {
@@ -22,7 +23,7 @@
             var myChart = echarts.init(document.getElementById('download-behavior-chart-container'));
            let option = {
                 title: {
-                    text: '手机应用下载',
+                    text: '应用',
                     x:'center'
                 },
                 tooltip: {
@@ -34,7 +35,7 @@
                     orient : 'vertical',
                     x : 'right',
                     y : 'center',
-                    data:['工作学习','拍摄美图','新闻阅读','游戏','生活购物','社交聊天','音乐视频','其它']
+                    data:['工作学习','新闻阅读','游戏','生活购物','其它']
                 },
                 // toolbox: {
                 //     show: true,
@@ -70,17 +71,15 @@
 			                        show: true,  
 			                        position:'outer',  
 			                        formatter: "{b} : {d}%"  
-			                    }   
+			                    },
+                                color:colorsFunc
 			              }  
 			          },    
                         data:[
                             {value:335, name:'工作学习'},
-                            {value:310, name:'拍摄美图'},
                             {value:233, name:'新闻阅读'},
                             {value:678, name:'游戏'},
                             {value:109, name:'生活购物'},  
-                            {value:289, name:'社交聊天'},
-                            {value:130, name:'音乐视频'},
                             {value:654, name:'其它'}
 
                         ]

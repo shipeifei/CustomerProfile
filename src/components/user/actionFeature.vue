@@ -3,7 +3,7 @@
         <el-collapse-item title="手机行为偏好" name="1">
             <el-row>
                 <el-col :md="8">
-                    <pc-behavior></pc-behavior>
+                    <download-behavior></download-behavior>
                 </el-col>
                 <el-col :md="8">
                     <media-preference></media-preference>

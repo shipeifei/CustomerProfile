@@ -1,5 +1,9 @@
 <template>
     <section class="user-search" v-loading.fullscreen.lock="fullscreenLoading" element-loading-text="拼命加载中">
+        <div class="search-icon">
+          <i class="icon tiezi"></i>
+      用户轨迹跟踪
+        </div>
         <div class="search-block">
             <el-form :model="userValidateForm" :inline="true" ref="userValidateForm">
                <!--  <el-form-item prop="userName" :rules="[
@@ -106,9 +110,28 @@
 
 <style lang="less" scoped>
 .user-search {
+  position: relative;
+  .search-icon{
+    position: absolute;
+    top:0;
+    left:10px;
+    display: inline-block;
+     .tiezi {
+              background: url(./../../assets/images/tiezi_b.png) 0 0 no-repeat;
+          }
+          .icon {
+                width: 22px;
+                height: 22px;
+                margin: 0 4px 0 0;
+                display: inline-block;
+                  position: relative;
+                top: 5px;
+            }
+  }
   .search-block {
         border-radius: 4px;
         transition: .2s;
+        display: inline-block;
   }
 
   .el-form-item {

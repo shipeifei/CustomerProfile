@@ -77,7 +77,7 @@
                     text: ['高','低'],           // 文本，默认为数值文本
                     calculable: true,
                     inRange: {
-                        color: ['#20a0ff','#13ce66','#f9c855'].reverse()
+                        color: ['#747d85','#13ce66','#f9c855'].reverse()
                     }
                 },
                 series: [
