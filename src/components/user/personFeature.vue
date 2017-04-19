@@ -77,7 +77,7 @@
                     <user-map></user-map>
                 </el-col>
             </el-row>
-            <el-row style="margin-top: 50px;">
+            <el-row style="margin-top: 0px;">
                 <el-col :md="8">
                     <user-device></user-device>
                 </el-col>
@@ -129,14 +129,17 @@
 .basic_info .el-form .el-form-item {
     margin-bottom: 0;
 }
-
+.basic_info  .el-form-item__label {
+    padding: 7px 12px 7px 0;
+    color: black;
+}
 .el-form-item__content  {
     padding-left: 30px;
 }
 </style>
 <style scoped>
     .basic_info {
-        margin-top: 8px;
+        margin-top: 0px;
     }
     ul {
         list-style-type: none;
@@ -150,8 +153,8 @@
         float: left;
         border-radius: 2px;
         font-size: 13px;
-        height: 30px;
-        line-height: 30px;
+        height: 24px;
+        line-height: 24px;
         /*width: 120px;*/
         text-align: center;
         color: #48576a;

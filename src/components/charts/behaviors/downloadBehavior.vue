@@ -35,7 +35,7 @@
                     orient : 'vertical',
                     x : 'right',
                     y : 'center',
-                    data:['工作学习','新闻阅读','游戏','生活购物','其它']
+                    data: this.user_datas.mobileApps.legend
                 },
                 // toolbox: {
                 //     show: true,
@@ -75,14 +75,7 @@
                                 color:colorsFunc
 			              }  
 			          },    
-                        data:[
-                            {value:335, name:'工作学习'},
-                            {value:233, name:'新闻阅读'},
-                            {value:678, name:'游戏'},
-                            {value:109, name:'生活购物'},  
-                            {value:654, name:'其它'}
-
-                        ]
+                        data: this.user_datas.mobileApps.data
                     }
                 ]
             };
