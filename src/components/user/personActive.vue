@@ -1,13 +1,10 @@
 <template>
     <el-collapse v-model="activeNames">
         <el-collapse-item title="活跃度" name="1">
-            
-                    <user-active></user-active>
-            </el-card>
+            <user-active></user-active>
         </el-collapse-item>
     </el-collapse>
 </template>
-
 
 <script type="text/babel">
     import $ from 'jquery'

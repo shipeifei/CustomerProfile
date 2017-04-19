@@ -64,7 +64,7 @@
                     show: true,
                     orient: 'vertical',
                     left: 'top',
-                    data:['重庆','北京','河北']
+                    data: this.user_datas.userMap.top
                 },
                 visualMap: {
                     show:false,
@@ -111,14 +111,7 @@
                                 //areaColor:"#ffdead",
                             }
                         },
-                        data:[
-                            {name: '北京',value: 30000 },
-                            {name: '天津',value: 10000 },
-                            {name: '上海',value: 1000 },
-                            {name: '重庆',value: 25000.92 },
-                            {name: '河北',value: 20000.92 },
-                            {name: '河南',value: 806.98 }
-                        ]
+                        data: this.user_datas.userMap.data
                     }
                 ]
             };
