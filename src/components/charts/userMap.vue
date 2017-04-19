@@ -3,12 +3,8 @@
     <div id="user-map-chart-container" class="chart-container"></div>
     <div class="top-city">
         <ul>
-            <li>
-                <span>TOP1:北京</span>
-            </li>
-            <li><span>TOP2:重庆</span>
-            </li>
-            <li><span>TOP3:河北</span>
+            <li v-for="(topProvince, index) in user_datas.userMap.top">
+                <span>TOP{{index + 1}}: {{topProvince}}</span>
             </li>
         </ul>
     </div>
@@ -19,7 +15,7 @@
     import $ from 'jquery'
     import localforage from 'localforage'
     import { mapGetters } from 'vuex'
-    import {colorsFunc} from '../../colors'
+    import colors, {colorsFunc} from '../../colors'
     var echarts = require('echarts');
     require('echarts/extension/bmap/bmap');
     export default {
@@ -75,7 +71,7 @@
                     calculable: true,
                     inRange: {
                         //少到多
-                        color: ['#ffffff', '#D2B48C', '#D2691E']
+                        color: colors
                     }
                 },
                 series: [

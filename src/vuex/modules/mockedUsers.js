@@ -35,9 +35,9 @@ const user1 = {
             {name: '北京',value: 50000 },
             {name: '天津',value: 10000 },
             {name: '上海',value: 1000 },
-            {name: '重庆',value: 25000.92 },
-            {name: '河北',value: 10000.92 },
-            {name: '河南',value: 806.98 }
+            {name: '重庆',value: 25000 },
+            {name: '河北',value: 10000 },
+            {name: '河南',value: 806 }
         ]
     },
     // 设备接入
@@ -293,9 +293,9 @@ const user2 = {
             {name: '北京',value: 30000 },
             {name: '天津',value: 10000 },
             {name: '上海',value: 1000 },
-            {name: '重庆',value: 25000.92 },
-            {name: '河北',value: 20000.92 },
-            {name: '河南',value: 806.98 }
+            {name: '重庆',value: 25000 },
+            {name: '河北',value: 20000 },
+            {name: '河南',value: 806 }
         ]
     },
     // 设备接入
@@ -551,9 +551,9 @@ const user3 = {
             {name: '北京',value: 30000 },
             {name: '天津',value: 10000 },
             {name: '上海',value: 1000 },
-            {name: '重庆',value: 25000.92 },
-            {name: '河北',value: 20000.92 },
-            {name: '河南',value: 806.98 }
+            {name: '重庆',value: 25000 },
+            {name: '河北',value: 20000 },
+            {name: '河南',value: 806 }
         ]
     },
     // 设备接入
@@ -809,9 +809,9 @@ const user4 = {
             {name: '北京',value: 30000 },
             {name: '天津',value: 10000 },
             {name: '上海',value: 1000 },
-            {name: '重庆',value: 25000.92 },
-            {name: '河北',value: 20000.92 },
-            {name: '河南',value: 806.98 }
+            {name: '重庆',value: 25000 },
+            {name: '河北',value: 20000 },
+            {name: '河南',value: 806 }
         ]
     },
     // 设备接入
@@ -1067,9 +1067,9 @@ const user5 = {
             {name: '北京',value: 30000 },
             {name: '天津',value: 10000 },
             {name: '上海',value: 1000 },
-            {name: '重庆',value: 25000.92 },
-            {name: '河北',value: 20000.92 },
-            {name: '河南',value: 806.98 }
+            {name: '重庆',value: 25000 },
+            {name: '河北',value: 20000 },
+            {name: '河南',value: 806 }
         ]
     },
     // 设备接入
