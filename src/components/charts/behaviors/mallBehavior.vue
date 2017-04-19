@@ -50,6 +50,9 @@
                     data : this.user_datas.mallBahavior.legend,
                     axisTick: {
                         alignWithLabel: true
+                    },
+                    axisLabel: {
+                        interval: 0
                     }
                 }
             ],
