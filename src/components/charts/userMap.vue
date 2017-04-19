@@ -4,11 +4,11 @@
     <div class="top-city">
         <ul>
             <li>
-                <span>北京</span>
+                <span>TOP1:北京</span>
             </li>
-            <li><span>重庆</span>
+            <li><span>TOP2:重庆</span>
             </li>
-            <li><span>河北</span>
+            <li><span>TOP3:河北</span>
             </li>
         </ul>
     </div>
@@ -64,7 +64,7 @@
                     data: this.user_datas.userMap.top
                 },
                 visualMap: {
-                    show:true,
+                    show:false,
                     min: 800,
                     max: 50000,
                     left: 'left',
