@@ -3,7 +3,6 @@
     <h2>已有联想设备</h2>
     <ul>
         <li>ZUK</li>
-        <li>MOTO Z</li>
     </ul>
 </div>
 </template>

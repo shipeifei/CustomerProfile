@@ -5,13 +5,10 @@
         <ul>
             <li>
                 <span>北京</span>
-                <el-button type="primary"></el-button>
             </li>
             <li><span>重庆</span>
-                <el-button type="success"></el-button>
             </li>
-            <li><span>河南</span>
-                <el-button type="warning"></el-button>
+            <li><span>河北</span>
             </li>
         </ul>
     </div>
@@ -57,7 +54,7 @@
                 },
                 tooltip: {
                     trigger: 'item',
-                    //backgroundColor:"#ff7f50",//提示标签背景颜色
+                    //backgroundColor:"#FFFFFF",//提示标签背景颜色
                     //textStyle:{color:"#fff"} //提示标签字体颜色
                 },
                 legend: {
@@ -67,7 +64,7 @@
                     data: this.user_datas.userMap.top
                 },
                 visualMap: {
-                    show:false,
+                    show:true,
                     min: 800,
                     max: 50000,
                     left: 'left',
@@ -77,7 +74,8 @@
                     text: ['高','低'],           // 文本，默认为数值文本
                     calculable: true,
                     inRange: {
-                        color: ['#747d85','#13ce66','#f9c855'].reverse()
+                        //少到多
+                        color: ['#ffffff', '#FAF0E6', '#F5DEB3']
                     }
                 },
                 series: [
@@ -85,7 +83,7 @@
                         name: 'position',
                         type: 'map',
                         mapType: 'china',
-                        showLegendSymbol: true,
+                        showLegendSymbol: false,
                         roam: false,
                         label: {
                             normal: {
@@ -103,7 +101,7 @@
                             normal: {
                                 borderWidth: .5,//区域边框宽度
                                 borderColor: '#009fe8',//区域边框颜色
-                                areaColor:"#B0B0B0",//区域颜色
+                                areaColor:"#FFFFFF",//区域颜色
                             },
                             emphasis: {
                                 borderWidth: .5,
@@ -144,6 +142,18 @@
                     }
                     .el-button{
                         padding: 5px 10px !important;
+                    }
+                    .top1{
+                        background-color: #00d970 !important;
+                        border-color: #00d970 !important;
+                    }
+                    .top2{
+                        background-color: #b3ffa7 !important;
+                        border-color: #b3ffa7 !important;
+                    }
+                    .top3{
+                        background-color: #9ae1ff !important;
+                        border-color: #9ae1ff !important;
                     }
 
                 }

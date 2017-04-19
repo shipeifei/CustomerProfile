@@ -49,9 +49,10 @@
                     type: 'radar',
                     itemStyle: {//图形样式，可设置图表内图形的默认样式和强调样式（悬浮时样式）：
                     normal: {
-                        areaStyle: {
-                            type: 'default'
-                        }
+                         areaStyle:{color: ['rgba(114, 172, 209, 0.2)',
+                    'rgba(114, 172, 209, 0.4)', 'rgba(114, 172, 209, 0.6)',
+                    'rgba(114, 172, 209, 0.8)', 'rgba(114, 172, 209, 1)'],}   //设置地图背景色的颜色设置  
+                        ,color:'#72ACD1' //刚才说的图例颜色设置 
                     }
                 },
                     // areaStyle: {normal: {}},
