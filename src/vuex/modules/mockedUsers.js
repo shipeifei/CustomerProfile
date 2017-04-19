@@ -32,7 +32,7 @@ const user1 = {
     userMap: {
         top: ['重庆','北京','河北'],
         data: [
-            {name: '北京',value: 50000 },
+            {name: '北京',value: 20000 },
             {name: '天津',value: 10000 },
             {name: '上海',value: 1000 },
             {name: '重庆',value: 25000 },
@@ -68,32 +68,32 @@ const user1 = {
                 {
                     date: "01-05",
                     event: "首次下载应用",
-                    desc: ""
+                    desc: "下载微信"
                 },
                 {
                     date: "02-01",
                     event: "注册Lenovo ID",
-                    desc: ""
+                    desc: "使用手机号18911004567成功注册联想账户"
                 },
                 {
                     date: "02-01",
                     event: "首次登陆",
-                    desc: ""
+                    desc: "第一次登陆联想官网www.lenovo.com.cn"
                 },
                 {
                     date: "03-18",
                     event: "首次发帖",
-                    desc: ""
+                    desc: "首次发主题为帮忙我选择一个合适的联想产品帖子"
                 },
                 {
                     date: "04-01",
                     event: "首次购买",
-                    desc: ""
+                    desc: "首次购买联想小新电脑一台，价格5996元"
                 },
                 {
                     date: "12-30",
                     event: "首次使用联想服务",
-                    desc: ""
+                    desc: "首次通过电话拨打联想服务寻求解决问题"
                 }
             ]
         },
@@ -103,17 +103,17 @@ const user1 = {
                 {
                     date: "02-11",
                     event: "最新发帖",
-                    desc: ""
+                    desc: "最新发主题为小新粉丝节点赞帖子"
                 },
                 {
                     date: "03-18",
                     event: "最新购买",
-                    desc: ""
+                    desc: "最新购买联想Yoga Pro 5电脑一台，价格9996元"
                 },
                 {
                     date: "03-18",
                     event: "最新下载",
-                    desc: ""
+                    desc: "下载植物大战僵尸2"
                 }
             ]
         }
@@ -192,24 +192,24 @@ const user1 = {
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0)],
-            "forum": [(Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0)],
-            "mall": [(Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0)],
+            "forum": [(Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0)],
+            "mall": [(Math.random() * 1).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 2).toFixed(0)],
             "device": [(Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
@@ -326,32 +326,32 @@ const user2 = {
                 {
                     date: "01-05",
                     event: "首次下载应用",
-                    desc: ""
+                    desc: "下载联想通讯录"
                 },
                 {
                     date: "02-01",
                     event: "注册Lenovo ID",
-                    desc: ""
+                    desc: "使用邮箱zhangly3@lenovo.com成功注册联想账户"
                 },
                 {
                     date: "02-01",
                     event: "首次登陆",
-                    desc: ""
+                    desc: "第一次登陆联想官网www.lenovo.com.cn"
                 },
                 {
                     date: "03-18",
                     event: "首次发帖",
-                    desc: ""
+                    desc: "首次发主题为无聊帖子"
                 },
                 {
                     date: "04-01",
                     event: "首次购买",
-                    desc: ""
+                    desc: "首次购买联想看家宝一台，价格99元"
                 },
                 {
                     date: "12-30",
                     event: "首次使用联想服务",
-                    desc: ""
+                    desc: "首次通过电话拨打联想服务寻求解决问题"
                 }
             ]
         },
@@ -361,17 +361,17 @@ const user2 = {
                 {
                     date: "02-11",
                     event: "最新发帖",
-                    desc: ""
+                    desc: "最新发主题延保点赞帖子"
                 },
                 {
                     date: "03-18",
                     event: "最新购买",
-                    desc: ""
+                    desc: "最新购买联想Yoga Pro 5电脑一台，价格12999元"
                 },
                 {
                     date: "03-18",
                     event: "最新下载",
-                    desc: ""
+                    desc: "下载了七七直播"
                 }
             ]
         }
@@ -450,24 +450,24 @@ const user2 = {
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0)],
-            "forum": [(Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0)],
-            "mall": [(Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0)],
+            "forum": [(Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0)],
+            "mall": [(Math.random() * 2).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 2).toFixed(0)],
             "device": [(Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
@@ -608,32 +608,32 @@ const user3 = {
                 {
                     date: "01-05",
                     event: "首次下载应用",
-                    desc: ""
+                    desc: "下载淘宝"
                 },
                 {
                     date: "02-01",
                     event: "注册Lenovo ID",
-                    desc: ""
+                    desc: "使用手机号13581853790成功注册联想账户"
                 },
                 {
                     date: "02-01",
                     event: "首次登陆",
-                    desc: ""
+                    desc: "第一次登陆联想官网www.lenovo.com.cn"
                 },
                 {
                     date: "03-18",
                     event: "首次发帖",
-                    desc: ""
+                    desc: "首次发主题为我为人人帖子"
                 },
                 {
                     date: "04-01",
                     event: "首次购买",
-                    desc: ""
+                    desc: "首次购买联想拯救者Y900一台，价格19996元"
                 },
                 {
                     date: "12-30",
                     event: "首次使用联想服务",
-                    desc: ""
+                    desc: "首次通过电话拨打联想服务寻求解决问题"
                 }
             ]
         },
@@ -643,17 +643,17 @@ const user3 = {
                 {
                     date: "02-11",
                     event: "最新发帖",
-                    desc: ""
+                    desc: "最新发主题为延保点赞帖子"
                 },
                 {
                     date: "03-18",
                     event: "最新购买",
-                    desc: ""
+                    desc: "最新购买联想鼠标一个，价格96元"
                 },
                 {
                     date: "03-18",
                     event: "最新下载",
-                    desc: ""
+                    desc: "下载王者荣耀"
                 }
             ]
         }
@@ -708,24 +708,24 @@ const user3 = {
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0)],
-            "forum": [(Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0)],
-            "mall": [(Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0)],
+            "forum": [(Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0)],
+            "mall": [(Math.random() * 2).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 1).toFixed(0)],
             "device": [(Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
@@ -866,32 +866,32 @@ const user4 = {
                 {
                     date: "01-05",
                     event: "首次下载应用",
-                    desc: ""
+                    desc: "下载QQ"
                 },
                 {
                     date: "02-01",
                     event: "注册Lenovo ID",
-                    desc: ""
+                    desc: "使用手机号13981853791成功注册联想账户"
                 },
                 {
                     date: "02-01",
                     event: "首次登陆",
-                    desc: ""
+                    desc: "第一次登陆联想官网www.lenovo.com.cn"
                 },
                 {
                     date: "03-18",
                     event: "首次发帖",
-                    desc: ""
+                    desc: "首次发主题为联想产品质量好帖子"
                 },
                 {
                     date: "04-01",
                     event: "首次购买",
-                    desc: ""
+                    desc: "首次购买联想小新电脑一台，价格5900元"
                 },
                 {
                     date: "12-30",
                     event: "首次使用联想服务",
-                    desc: ""
+                    desc: "首次通过电话拨打联想服务寻求解决问题"
                 }
             ]
         },
@@ -901,17 +901,17 @@ const user4 = {
                 {
                     date: "02-11",
                     event: "最新发帖",
-                    desc: ""
+                    desc: "最新发主题为延保点赞帖子"
                 },
                 {
                     date: "03-18",
                     event: "最新购买",
-                    desc: ""
+                    desc: "最新购买联想Yoga Pro 5电脑一台，价格8999元"
                 },
                 {
                     date: "03-18",
                     event: "最新下载",
-                    desc: ""
+                    desc: "最新下载苏宁易购"
                 }
             ]
         }
@@ -966,24 +966,24 @@ const user4 = {
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0)],
-            "forum": [(Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0)],
-            "mall": [(Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0)],
+            "forum": [(Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0)],
+            "mall": [(Math.random() * 2).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 1).toFixed(0)],
             "device": [(Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
@@ -1035,7 +1035,7 @@ const user4 = {
 const user5 = {
     // 用户基本信息
     'userBaseInfo': {
-        "LenovoID": ['暂无'],
+        "LenovoID": ['18910860757'],
         "phone": '18910860757',
         "email": "暂无",
         "IMEI": "暂无",
@@ -1102,7 +1102,7 @@ const user5 = {
         ["消费总额", "3900-4600"],
         ["客单价", "700-2600"],
         ["笔单价", "600-1000"],
-        ["价值度", "重要价值"]
+        ["价值度", "一般价值"]
     ],
     // 词云 - 社区社交图谱
     "social": [
@@ -1124,32 +1124,32 @@ const user5 = {
                 {
                     date: "01-05",
                     event: "首次下载应用",
-                    desc: ""
+                    desc: "下载一起做作业"
                 },
                 {
                     date: "02-01",
                     event: "注册Lenovo ID",
-                    desc: ""
+                    desc: "使用手机号18910860757成功注册联想账户"
                 },
                 {
                     date: "02-01",
                     event: "首次登陆",
-                    desc: ""
+                    desc: "第一次登陆联想官网www.lenovo.com.cn"
                 },
                 {
                     date: "03-18",
                     event: "首次发帖",
-                    desc: ""
+                    desc: "首次发主题为今天真高兴帖子"
                 },
                 {
                     date: "04-01",
                     event: "首次购买",
-                    desc: ""
+                    desc: "首次购买联想thinkpad T450电脑一台,价格4996元"
                 },
                 {
                     date: "12-30",
                     event: "首次使用联想服务",
-                    desc: ""
+                    desc: "首次通过电话拨打联想服务寻求解决问题"
                 }
             ]
         },
@@ -1159,17 +1159,17 @@ const user5 = {
                 {
                     date: "02-11",
                     event: "最新发帖",
-                    desc: ""
+                    desc: "最新发主题为延保点赞帖子"
                 },
                 {
                     date: "03-18",
                     event: "最新购买",
-                    desc: ""
+                    desc: "最新购买联想Thinkpad X1电脑一台，价格12996元"
                 },
                 {
                     date: "03-18",
                     event: "最新下载",
-                    desc: ""
+                    desc: "最新下载联想服务"
                 }
             ]
         }
@@ -1224,24 +1224,24 @@ const user5 = {
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0)],
-            "forum": [(Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0),
-                    (Math.random() * 50).toFixed(0)],
-            "mall": [(Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0),
-                    (Math.random() * 10).toFixed(0)],
+            "forum": [(Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0),
+                    (Math.random() * 5).toFixed(0)],
+            "mall": [(Math.random() * 1).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 2).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 3).toFixed(0),
+                    (Math.random() * 1).toFixed(0),
+                    (Math.random() * 1).toFixed(0)],
             "device": [(Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
                     (Math.random(1,9) * 10).toFixed(0),
