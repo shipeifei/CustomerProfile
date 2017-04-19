@@ -15,15 +15,20 @@ const user1 = {
     "userFeature": {
         "origin": "商城",
         'age': 30,
+        "ageStr": "25-34",
         "sex": "男",
         "education": '大专、本科',
         "salary": 10000,
+        "salaryStr": "10000-15000",
         "career": "互联网/IT",
         "job": "IT工程师",
         "married": "否",
         "hasChildren": "无",
         "hasCar": "有",
-        "isStudent": "否"
+        "isStudent": "否",
+        "country": "中国",
+        "province": "北京市",
+        "city": "北京市"
     },
     "consumer": [
         ["品类购买偏好", "笔记本电脑-拯救者系列"],
@@ -164,15 +169,20 @@ const user2 = {
     "userFeature": {
         "origin": "商城",
         'age': 40,
+        "ageStr": "35-49",
         "sex": "女",
         "education": '硕士以上',
         "salary": 20000,
+        "salaryStr": "15000以上",
         "career": "互联网/IT",
         "job": "UI设计师",
         "married": "是",
         "hasChildren": "有",
         "hasCar": "无",
-        "isStudent": "否"
+        "isStudent": "否",
+        "country": "中国",
+        "province": "北京市",
+        "city": "北京市"
     },
     "consumer": [
         ["品类购买偏好", "笔记本电脑-拯救者系列"],

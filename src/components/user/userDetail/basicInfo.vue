@@ -9,7 +9,7 @@
             <tbody>
                 <tr>
                     <td>年龄</td>
-                    <td>{{user_datas.userFeature.age}}</td>
+                    <td>{{user_datas.userFeature.ageStr}}</td>
                 </tr>
                 <tr>
                     <td>性别</td>
@@ -17,19 +17,19 @@
                 </tr>
                 <tr>
                     <td>收入</td>
-                    <td>{{user_datas.userFeature.salary}}</td>
+                    <td>{{user_datas.userFeature.salaryStr}}</td>
                 </tr>
                 <tr>
                     <td>国家</td>
-                    <td>中国</td>
+                    <td>{{user_datas.userFeature.country}}</td>
                 </tr>
                 <tr>
                     <td>省份</td>
-                    <td>广西</td>
+                    <td>{{user_datas.userFeature.province}}</td>
                 </tr>
                 <tr>
                     <td>城市</td>
-                    <td>柳州</td>
+                    <td>{{user_datas.userFeature.city}}</td>
                 </tr>
                 <tr>
                     <td>教育程度</td>
