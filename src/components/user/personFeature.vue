@@ -8,19 +8,19 @@
                         <el-form label-width="60px" v-if="user_datas.userFeature">
                             <el-form-item label="年龄：">
                                 <ul>
-                                    <li :class="[user_datas.userFeature.ageStr == '18岁以下' ? 'active': '']">
+                                    <li :class="[user_datas.userFeature.age == '18岁以下' ? 'active': '']">
                                         18岁以下
                                     </li>
-                                    <li :class="[user_datas.userFeature.ageStr == '19-24' ? 'active': '']">
+                                    <li :class="[user_datas.userFeature.age == '19-24' ? 'active': '']">
                                         19-24
                                     </li>
-                                    <li :class="[user_datas.userFeature.ageStr == '25-34' ? 'active' : '']">
+                                    <li :class="[user_datas.userFeature.age == '25-34' ? 'active' : '']">
                                         25-34
                                     </li>
-                                    <li :class="[user_datas.userFeature.ageStr == '35-49' ? 'active' : '']">
+                                    <li :class="[user_datas.userFeature.age == '35-49' ? 'active' : '']">
                                         35-49
                                     </li>
-                                    <li :class="[user_datas.userFeature.ageStr == '50岁以上' ? 'active' : '']">
+                                    <li :class="[user_datas.userFeature.age == '50岁以上' ? 'active' : '']">
                                         50岁以上
                                     </li>
                                 </ul>
@@ -53,19 +53,19 @@
                             </el-form-item>
                             <el-form-item label="收入：">
                                 <ul class="salary">
-                                    <li :class="[user_datas.userFeature.salaryStr == '3500以下' ? 'active': '']">
+                                    <li :class="[user_datas.userFeature.salary == '3500以下' ? 'active': '']">
                                         3500以下
                                     </li>
-                                    <li :class="[user_datas.userFeature.salaryStr == '3500-8000' ? 'active': '']">
+                                    <li :class="[user_datas.userFeature.salary == '3500-8000' ? 'active': '']">
                                         3500-8000
                                     </li>
-                                    <li :class="[user_datas.userFeature.salaryStr == '8000-10000' ? 'active' : '']">
+                                    <li :class="[user_datas.userFeature.salary == '8000-10000' ? 'active' : '']">
                                         8000-10000
                                     </li>
-                                    <li :class="[user_datas.userFeature.salaryStr == '10000-15000' ? 'active' : '']">
+                                    <li :class="[user_datas.userFeature.salary == '10000-15000' ? 'active' : '']">
                                         10000-15000
                                     </li>
-                                    <li :class="[user_datas.userFeature.salaryStr == '15000以上' ? 'active' : '']">
+                                    <li :class="[user_datas.userFeature.salary == '15000以上' ? 'active' : '']">
                                         15000以上
                                     </li>
                                 </ul>

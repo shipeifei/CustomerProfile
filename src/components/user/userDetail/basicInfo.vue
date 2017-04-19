@@ -9,7 +9,7 @@
             <tbody>
                 <tr>
                     <td>年龄</td>
-                    <td>{{user_datas.userFeature.ageStr}}</td>
+                    <td>{{user_datas.userFeature.age}}</td>
                 </tr>
                 <tr>
                     <td>性别</td>
@@ -17,7 +17,7 @@
                 </tr>
                 <tr>
                     <td>收入</td>
-                    <td>{{user_datas.userFeature.salaryStr}}</td>
+                    <td>{{user_datas.userFeature.salary}}</td>
                 </tr>
                 <tr>
                     <td>国家</td>
