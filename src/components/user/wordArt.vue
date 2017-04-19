@@ -1,6 +1,6 @@
 <template>
     <el-collapse v-model="activeNames">
-        <el-collapse-item title="词云" name="1">
+        <el-collapse-item title="用户标签" name="1">
             <user-detail></user-detail>
         </el-collapse-item>
     </el-collapse>
