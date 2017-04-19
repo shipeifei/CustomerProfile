@@ -5,6 +5,7 @@
     import $ from 'jquery'
     import localforage from 'localforage'
     import { mapGetters } from 'vuex'
+    import {colorsFunc} from '../../../colors'
     var echarts = require('echarts');
     export default {
           name: 'communityBehavior',
@@ -45,7 +46,7 @@
             xAxis : [
                 {
                     type : 'category',
-                    data : ['转帖数量', '发帖数量','回帖数量'],
+                    data : this.user_datas.communityBahavior.legend,
                     axisTick: {
                         alignWithLabel: true
                     }
@@ -62,14 +63,11 @@
                     type:'bar',
                     itemStyle: {
                         normal: {
-                            color: function(params) {
-                                var colorList = ['#C1232B', '#26C0C0', '#FCCE10', '#E87C25', '#27727B'];
-                                return colorList[params.dataIndex];
-                            }
+                            color: colorsFunc
                         }
                     },
                     barWidth: '60%',
-                    data:[76, 29, 40]
+                    data: this.user_datas.communityBahavior.data
                 }
             ]
         };

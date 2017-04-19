@@ -168,7 +168,7 @@
     .dashed {
         background: url(../../assets/images/timeline/dotted-line.png) repeat-y 50% 0;
         overflow: hidden;
-        height: 100px;
+        height: 77px;
         margin-left: -1px;
         margin-top: -6px;
     }
@@ -201,10 +201,10 @@
     .history-date ul li {
         padding: 0;
         margin: 0;
-        padding-top: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         background: url(../../assets/images/timeline/icon7.png) no-repeat 50% 50px;
         +background: url(../../assets/images/timeline/icon7.png) no-repeat 50% 50px;
-        padding-bottom: 50px;
         zoom: 1;
         height: 14px;
     }
@@ -214,7 +214,7 @@
         width: 50%;
         text-align: left;
         margin-right: -30px;
-        margin-top: -50px;
+        margin-top: -30px;
         color: #878787;
         font: normal 18px/16px Arial;
     }
@@ -223,7 +223,7 @@
         width: 50%;
         text-align: right;
         margin-left: -30px;
-        margin-top: 0px;
+        margin-top: 15px;
         color: #878787;
         font: normal 18px/16px Arial;
     }
@@ -243,7 +243,7 @@
         background: url(../../assets/images/timeline/right_arrow.png) no-repeat 100% 0;
         float: right;
         margin-right: 52%;
-        margin-top: -10px;
+        margin-top: 10px;
         padding-right: 20px;
         display: block;
         background-color: #FFBB42;

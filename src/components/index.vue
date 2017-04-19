@@ -25,8 +25,11 @@
                         <div class="person-active">
                             <person-active></person-active>
                         </div>
-                        <div class="action-feature">
-                            <action-feature></action-feature>
+                        <div class="mobile-action-feature">
+                            <mobile-action-feature></mobile-action-feature>
+                        </div>
+                        <div class="pc-action-feature">
+                            <pc-action-feature></pc-action-feature>
                         </div>
                     </div>
                 </div>
@@ -43,7 +46,8 @@
     import personFeature from '@/components/user/personFeature.vue'
     import personTrace from '@/components/user/personTrace.vue'
     import personActive from '@/components/user/personActive.vue'
-    import actionFeature from '@/components/user/actionFeature.vue'
+    import mobileActionFeature from '@/components/user/mobileActionFeature.vue'
+    import pcActionFeature from '@/components/user/pcActionFeature.vue'
     import personPreference from '@/components/user/personPreference.vue'
     import wordArt from '@/components/user/wordArt.vue'
     import { mapGetters } from 'vuex'
@@ -53,7 +57,8 @@
           components: {
             'personFeature': personFeature,
             'personTrace': personTrace,
-            'actionFeature': actionFeature,
+            'mobileActionFeature': mobileActionFeature,
+            'pcActionFeature': pcActionFeature,
             'userSearch': userSearch,
             'personPreference': personPreference,
             'personActive': personActive,

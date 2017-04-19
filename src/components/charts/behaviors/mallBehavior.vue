@@ -5,6 +5,7 @@
     import $ from 'jquery'
     import localforage from 'localforage'
     import { mapGetters } from 'vuex'
+    import {colorsFunc} from '../../../colors'
     var echarts = require('echarts');
     export default {
           name: 'mallBehavior',
@@ -46,7 +47,7 @@
             xAxis : [
                 {
                     type : 'category',
-                    data : ['浏览次数', '加入购物车', '购买'],
+                    data : this.user_datas.mallBahavior.legend,
                     axisTick: {
                         alignWithLabel: true
                     }
@@ -63,14 +64,11 @@
                     type:'bar',
                     itemStyle: {
                         normal: {
-                            color: function(params) {
-                                var colorList = ['#C1232B', '#26C0C0', '#FCCE10', '#E87C25', '#27727B'];
-                                return colorList[params.dataIndex];
-                            }
+                            color: colorsFunc
                         }
                     },
                     barWidth: '60%',
-                    data:[522, 220, 47]
+                    data: this.user_datas.mallBahavior.data
                 }
             ]
         };
