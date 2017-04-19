@@ -2,7 +2,7 @@
     <el-collapse v-model="activeNames">
         <el-collapse-item title="基本信息" name="1">
             <el-row>
-                <el-col :md="16">
+                <el-col :md="14">
                     <user-info></user-info>
                     <div class="basic_info">
                         <el-form label-width="60px" v-if="user_datas.userFeature">
@@ -73,7 +73,7 @@
                         </el-form>
                     </div>
                 </el-col>
-                <el-col :md="8">
+                <el-col :md="10">
                     <user-map></user-map>
                 </el-col>
             </el-row>
@@ -85,7 +85,6 @@
                     <phone-model></phone-model>
                 </el-col>
                 <el-col :md="8">
-                    
                 </el-col>
             </el-row>
         </el-collapse-item>

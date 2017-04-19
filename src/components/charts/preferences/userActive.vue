@@ -11,21 +11,20 @@
                     <el-button type="primary" icon="search" @click="monthSearch">搜索</el-button>
                 </div>
                 <div class=" user-active-chart-wrapper">
-                    <div id="user-active-chart-container1" class="chart-container" style="min-width: 450px;
+                    <div id="user-active-chart-container1" class="chart-container" style="
         min-height: 150px;
-        max-width: 450px;
         max-height: 150px"></div>
-                    <div id="user-active-chart-container2" class="chart-container" style="min-width: 450px;
+                    <div id="user-active-chart-container2" class="chart-container" style="
         min-height: 150px;
-        max-width: 450px;
+        
         max-height: 150px"></div>
-                    <div id="user-active-chart-container3" class="chart-container" style="min-width: 450px;
+                    <div id="user-active-chart-container3" class="chart-container" style="
         min-height: 150px;
-        max-width: 450px;
+        
         max-height: 150px"></div>
-                    <div id="user-active-chart-container4" class="chart-container" style="min-width: 450px;
+                    <div id="user-active-chart-container4" class="chart-container" style="
         min-height: 150px;
-        max-width: 450px;
+        
         max-height: 150px"></div>
                 </div>
             </el-col>
@@ -39,21 +38,21 @@
                     <el-button type="primary" icon="search" @click="daySearch">搜索</el-button>
                 </div>
                 <div class=" user-active-chart-wrapper">
-                    <div id="user-active-chart-container5" class="chart-container" style="min-width: 450px;
+                    <div id="user-active-chart-container5" class="chart-container" style="
         min-height: 150px;
-        max-width: 450px;
+        
         max-height: 150px"></div>
-                    <div id="user-active-chart-container6" class="chart-container" style="min-width: 450px;
+                    <div id="user-active-chart-container6" class="chart-container" style="
         min-height: 150px;
-        max-width: 450px;
+        
         max-height: 150px"></div>
-                    <div id="user-active-chart-container7" class="chart-container" style="min-width: 450px;
+                    <div id="user-active-chart-container7" class="chart-container" style="
         min-height: 150px;
-        max-width: 450px;
+        
         max-height: 150px"></div>
-                    <div id="user-active-chart-container8" class="chart-container" style="min-width: 450px;
+                    <div id="user-active-chart-container8" class="chart-container" style="
         min-height: 150px;
-        max-width: 450px;
+        
         max-height: 150px"></div>
                 </div>
             </el-col>

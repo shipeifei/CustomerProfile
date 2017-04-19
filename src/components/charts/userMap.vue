@@ -135,7 +135,7 @@
         height: 100%;
         .top-city{
             position: absolute;
-            right: 15%;
+            right: 8%;
             top:40%;
             ul{
                 list-style: none;
