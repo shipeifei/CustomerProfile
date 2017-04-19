@@ -85,6 +85,7 @@
                     <phone-model></phone-model>
                 </el-col>
                 <el-col :md="8">
+                    <lenovo-device></lenovo-device>
                 </el-col>
             </el-row>
         </el-collapse-item>
@@ -95,6 +96,7 @@
     import $ from 'jquery'
     import localforage from 'localforage'
     import userDevice from '@/components/charts/userDevice.vue'
+    import lenovoDevice from '@/components/charts/lenovoDevice.vue'
     import userMap from '@/components/charts/userMap.vue'
     import phoneModel from '@/components/charts/phoneModel.vue'
     import userInfo from '@/components/user/userInfo.vue'
@@ -104,6 +106,7 @@
           name: 'personFeature',
           components: {
             'userDevice': userDevice,
+            'lenovoDevice': lenovoDevice,
             'userMap': userMap,
             'phoneModel': phoneModel,
             'userInfo': userInfo
