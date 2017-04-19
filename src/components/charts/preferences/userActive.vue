@@ -97,34 +97,28 @@
                     return a.clone().add(index, 'days').format('YYYY-MM-DD');
                 });
             };
-            var generateMonth=function(date1,date2){
-                var result=diffMonths(date1,date2);
+            var generateMonth=function(user_datas, date1,date2){
+                var result = diffMonths(date1,date2);
+                var size = Math.min(user_datas.activity.byMonth.app.length, result.length);
                  xAxisData = [];
-                 data1 = [];
-                 data2 = [];
-                 data3 = [];
-                 data4 = [];
-                for (var i = 0; i < result.length; i++) {
+                 data1 = [...user_datas.activity.byMonth.app.slice(0, size)];
+                 data2 = [...user_datas.activity.byMonth.forum.slice(0, size)];
+                 data3 = [...user_datas.activity.byMonth.mall.slice(0, size)];
+                 data4 = [...user_datas.activity.byMonth.device.slice(0, size)];
+                for (var i = 0; i < size; i++) {
                     xAxisData.push(result[i]);
-                    data1.push((Math.random(1,9) * 100).toFixed(0));
-                    data2.push((Math.random() * 100).toFixed(0));
-                    data3.push((Math.random() * 100).toFixed(0));
-                    data4.push((Math.random(1,9) * 300).toFixed(0));
                 }
             }
-            var generateDay=function(date1,date2){
-                var result=diffDays(date1,date2);
+            var generateDay=function(user_datas, date1,date2){
+                var result = diffDays(date1,date2);
+                var size = Math.min(user_datas.activity.byDay.app.length, result.length);
                  xAxisData = [];
-                  data5 = [];
-                 data6 = [];
-                 data7 = [];
-                 data8 = [];
-                for (var i = 0; i < result.length; i++) {
+                 data5 = [...user_datas.activity.byDay.app.slice(0, size)];
+                 data6 = [...user_datas.activity.byDay.forum.slice(0, size)];
+                 data7 = [...user_datas.activity.byDay.mall.slice(0, size)];
+                 data8 = [...user_datas.activity.byDay.device.slice(0, size)];
+                for (var i = 0; i < size; i++) {
                     xAxisData.push(result[i]);
-                    data5.push((Math.random(1,9) * 10).toFixed(0));
-                    data6.push((Math.random() * 50).toFixed(0));
-                    data7.push((Math.random() * 10).toFixed(0));
-                    data8.push((Math.random(1,9) * 10).toFixed(0));
                 }
             }
         
@@ -177,7 +171,7 @@
                           type: 'error'
                         });
                 }
-                 generateMonth(this.beginMonth,this.endMonth);
+                 generateMonth(this.user_datas, this.beginMonth,this.endMonth);
                 this.drawGraph('user-active-chart-container1','App\n\n下载次数',data1,false,'#9ACD32','dashed');  
                 this.drawGraph('user-active-chart-container2','论坛\n\n浏览次数',data2,false,'#9370DB','dashed');
                 this.drawGraph('user-active-chart-container3','商城\n\n登录次数',data3,false,'#8E388E','dashed');  
@@ -209,7 +203,7 @@
                           type: 'error'
                         });
                 }
-                 generateDay(this.beginDay,this.endDay);
+                 generateDay(this.user_datas, this.beginDay,this.endDay);
                 this.drawGraph('user-active-chart-container5','App\n\n下载次数',data5,false,'#9ACD32','dashed');  
                 this.drawGraph('user-active-chart-container6','论坛\n\n浏览次数',data6,false,'#9370DB','dashed');
                 this.drawGraph('user-active-chart-container7','商城\n\n登录次数',data7,false,'#8E388E','dashed');  
@@ -321,13 +315,13 @@
         },
         mounted() {
            this.$nextTick(()=> {
-                generateMonth(this.beginMonth,this.endMonth);
+                generateMonth(this.user_datas, this.beginMonth,this.endMonth);
                 this.drawGraph('user-active-chart-container1','App\n\n下载次数',data1,false,'#9ACD32','dashed');  
                 this.drawGraph('user-active-chart-container2','论坛\n\n浏览次数',data2,false,'#9370DB','dashed');
                 this.drawGraph('user-active-chart-container3','商城\n\n登录次数',data3,false,'#8E388E','dashed');  
                 this.drawGraph('user-active-chart-container4','设备\n\n使用时长',data4,true,'#EE3B3B','solid'); 
 
-                generateDay(this.beginDay,this.endDay);
+                generateDay(this.user_datas, this.beginDay,this.endDay);
                 this.drawGraph('user-active-chart-container5','App\n\n下载次数',data5,false,'#9ACD32','dashed');  
                 this.drawGraph('user-active-chart-container6','论坛\n\n浏览次数',data6,false,'#9370DB','dashed');
                 this.drawGraph('user-active-chart-container7','商城\n\n登录次数',data7,false,'#8E388E','dashed');  
