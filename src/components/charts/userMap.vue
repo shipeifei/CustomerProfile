@@ -75,7 +75,7 @@
                     calculable: true,
                     inRange: {
                         //少到多
-                        color: ['#ffffff', '#FAF0E6', '#F5DEB3']
+                        color: ['#ffffff', '#D2B48C', '#D2691E']
                     }
                 },
                 series: [
