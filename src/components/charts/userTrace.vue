@@ -10,12 +10,18 @@
           <template v-if="index % 2 == 0">
             <h3>{{e.date}}<span>{{y.year}}</span></h3>
             <dl>
-                <span>{{e.event}}</span>
+                <el-tooltip v-if="e.desc" class="item" effect="light" :content="e.desc" placement="top">
+                    <span>{{e.event}}</span>
+                </el-tooltip>
+                <span v-else>{{e.event}}</span>
             </dl>
           </template>
           <template v-else>
             <dl>
-                <span>{{e.event}}</span>
+                <el-tooltip v-if="e.desc" class="item" effect="light" :content="e.desc" placement="top">
+                    <span>{{e.event}}</span>
+                </el-tooltip>
+                <span v-else>{{e.event}}</span>
             </dl>
             <h3>{{e.date}}<span>{{y.year}}</span></h3>
           </template>

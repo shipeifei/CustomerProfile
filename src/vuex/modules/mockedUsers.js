@@ -69,27 +69,33 @@ const user1 = {
             events: [
                 {
                     date: "01-05",
-                    event: "首次下载应用"
+                    event: "首次下载应用",
+                    desc: "sfs"
                 },
                 {
                     date: "02-01",
-                    event: "注册Lenovo ID"
+                    event: "注册Lenovo ID",
+                    desc: ""
                 },
                 {
                     date: "02-01",
-                    event: "首次登陆"
+                    event: "首次登陆",
+                    desc: ""
                 },
                 {
                     date: "03-18",
-                    event: "首次发帖"
+                    event: "首次发帖",
+                    desc: ""
                 },
                 {
                     date: "04-01",
-                    event: "首次购买"
+                    event: "首次购买",
+                    desc: ""
                 },
                 {
                     date: "12-30",
-                    event: "首次使用联想服务"
+                    event: "首次使用联想服务",
+                    desc: ""
                 }
             ]
         },
@@ -98,15 +104,18 @@ const user1 = {
             events: [
                 {
                     date: "02-11",
-                    event: "最新发帖"
+                    event: "最新发帖",
+                    desc: ""
                 },
                 {
                     date: "03-18",
-                    event: "最新购买"
+                    event: "最新购买",
+                    desc: ""
                 },
                 {
                     date: "03-18",
-                    event: "最新下载"
+                    event: "最新下载",
+                    desc: ""
                 }
             ]
         }
@@ -320,27 +329,33 @@ const user2 = {
             events: [
                 {
                     date: "01-05",
-                    event: "首次下载应用"
+                    event: "首次下载应用",
+                    desc: ""
                 },
                 {
                     date: "02-01",
-                    event: "注册Lenovo ID"
+                    event: "注册Lenovo ID",
+                    desc: ""
                 },
                 {
                     date: "02-01",
-                    event: "首次登陆"
+                    event: "首次登陆",
+                    desc: ""
                 },
                 {
                     date: "03-18",
-                    event: "首次发帖"
+                    event: "首次发帖",
+                    desc: ""
                 },
                 {
                     date: "04-01",
-                    event: "首次购买"
+                    event: "首次购买",
+                    desc: ""
                 },
                 {
                     date: "12-30",
-                    event: "首次使用联想服务"
+                    event: "首次使用联想服务",
+                    desc: ""
                 }
             ]
         },
@@ -349,15 +364,18 @@ const user2 = {
             events: [
                 {
                     date: "02-11",
-                    event: "最新发帖"
+                    event: "最新发帖",
+                    desc: ""
                 },
                 {
                     date: "03-18",
-                    event: "最新购买"
+                    event: "最新购买",
+                    desc: ""
                 },
                 {
                     date: "03-18",
-                    event: "最新下载"
+                    event: "最新下载",
+                    desc: ""
                 }
             ]
         }
