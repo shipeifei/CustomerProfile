@@ -101,6 +101,11 @@ const user1 = {
             year: 2017,
             events: [
                 {
+                    date: "",
+                    event: "",
+                    desc: ""
+                },
+                {
                     date: "02-11",
                     event: "最新发帖",
                     desc: "最新发主题为小新粉丝节点赞帖子"
@@ -358,6 +363,11 @@ const user2 = {
         {
             year: 2017,
             events: [
+                {
+                    date: "",
+                    event: "",
+                    desc: ""
+                },
                 {
                     date: "02-11",
                     event: "最新发帖",
@@ -641,6 +651,11 @@ const user3 = {
             year: 2017,
             events: [
                 {
+                    date: "",
+                    event: "",
+                    desc: ""
+                },
+                {
                     date: "02-11",
                     event: "最新发帖",
                     desc: "最新发主题为延保点赞帖子"
@@ -899,6 +914,11 @@ const user4 = {
             year: 2017,
             events: [
                 {
+                    date: "",
+                    event: "",
+                    desc: ""
+                },
+                {
                     date: "02-11",
                     event: "最新发帖",
                     desc: "最新发主题为延保点赞帖子"
@@ -1156,6 +1176,11 @@ const user5 = {
         {
             year: 2017,
             events: [
+                {
+                    date: "",
+                    event: "",
+                    desc: ""
+                },
                 {
                     date: "02-11",
                     event: "最新发帖",

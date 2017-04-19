@@ -1,8 +1,39 @@
 <template>
 <div>
   <div class="history">
-   <div class="history-date" v-for="y in user_datas.userTrace">
+    <div class="history-date" v-for="y in oldEvents">
       <div class="year">
+        <div>{{y.year}}年</div>
+      </div>
+      <ul>
+        <li :class="[index % 2 == 0 ? 'right' : 'left']" v-for="(e, index) in y.events">
+          <template v-if="index % 2 == 0">
+            <h3>{{e.date}}<span>{{y.year}}</span></h3>
+            <dl>
+                <el-tooltip v-if="e.desc" class="item" effect="light" :content="e.desc" placement="top">
+                    <span>{{e.event}}</span>
+                </el-tooltip>
+                <span v-else>{{e.event}}</span>
+            </dl>
+          </template>
+          <template v-else>
+            <dl>
+                <el-tooltip v-if="e.desc" class="item" effect="light" :content="e.desc" placement="top">
+                    <span>{{e.event}}</span>
+                </el-tooltip>
+                <span v-else>{{e.event}}</span>
+            </dl>
+            <h3>{{e.date}}<span>{{y.year}}</span></h3>
+          </template>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div v-if="hasRecentEvents" class="dashed">
+  </div>
+  <div v-if="hasRecentEvents" class="history">
+    <div class="history-date" v-for="(y, index) in recentEvents">
+      <div class="year" v-if="(index > 0) || (y.year != oldEvents[oldEvents.length - 1].year)">
         <div>{{y.year}}年</div>
       </div>
       <ul>
@@ -50,7 +81,74 @@
             ...mapGetters({
                 home_datas: 'home_datas',
                 user_datas: 'user_datas'
-            })
+            }),
+            hasRecentEvents() {
+              let hasRecentEvents = false;
+              this.user_datas.userTrace.forEach(y => {
+                y.events.forEach(e => {
+                  if (!e.event) {
+                    hasRecentEvents = true;
+                  }
+                });
+              });
+              return hasRecentEvents;
+            },
+            oldEvents() {
+              // 获取最近轨迹之前的所有轨迹
+              if (!this.hasRecentEvents) {
+                return this.user_datas.userTrace;
+              }
+
+              const oldEvents = [];
+
+              this.user_datas.userTrace.forEach(y => {
+                let hasRecentEvents = false;
+                const events = [];
+                y.events.forEach(e => {
+                  if (!e.event) {
+                    hasRecentEvents = true;
+                  }
+                  if (e.event && !hasRecentEvents) {
+                    events.push({...e});
+                  }
+                });
+                if (events.length) {
+                  oldEvents.push({
+                    year: y.year,
+                    events
+                  });
+                }
+              });
+
+              return oldEvents;
+            },
+            recentEvents() {
+              // 获取最近的轨迹
+              const recentEvents = [];
+
+              if (this.hasRecentEvents) {
+                this.user_datas.userTrace.forEach(y => {
+                  let hasRecentEvents = false;
+                  const events = [];
+                  y.events.forEach(e => {
+                    if (!e.event) {
+                      hasRecentEvents = true;
+                    }
+                    if (e.event && hasRecentEvents) {
+                      events.push({...e});
+                    }
+                  });
+                  if (events.length) {
+                    recentEvents.push({
+                      year: y.year,
+                      events
+                    });
+                  }
+                });
+              }
+
+              return recentEvents;
+            }
         },
         created () {
             //this.$store.dispatch('getHomeInfo')
@@ -65,8 +163,14 @@
 <style scoped>
     .history {
         background: url(../../assets/images/timeline/line4.png) repeat-y 50% 0;
+    }
+
+    .dashed {
+        background: url(../../assets/images/timeline/dotted-line.png) repeat-y 50% 0;
         overflow: hidden;
-        position: relative;
+        height: 100px;
+        margin-left: -1px;
+        margin-top: -6px;
     }
             
     .history-date {
