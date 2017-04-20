@@ -1,6 +1,6 @@
 <template>
 <div class="history-container">
-    <div class="history">
+    <div class="history" :style="{width: ((allEventsCount + (hasRecentEvents ? 1 : 0)) * 120 + 40) + 'px'}">
         <div class="event above">
             <div v-for="(e, index) in allOldEvents" :class="{'name': index % 2 == 0}">
                 <el-tooltip v-if="e.desc" class="item" effect="light" :content="e.desc" placement="top">
@@ -125,6 +125,9 @@
                 });
               });
               return events;
+            },
+            allEventsCount() {
+                return this.allEvents.length;
             },
             allOldEvents() {
               const oldEvents = [];
