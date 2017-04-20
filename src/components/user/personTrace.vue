@@ -8,7 +8,7 @@
 
 <script type="text/babel">
     import $ from 'jquery'
-    import userTrace from '@/components/charts/userTrace.vue'
+    import userTrace from '@/components/charts/userTraceHorizontal.vue'
     import { mapGetters } from 'vuex'
     var echarts = require('echarts');
     export default {

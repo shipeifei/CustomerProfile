@@ -63,10 +63,7 @@
 </div>
 </template>
 <script type="text/babel">
-    import $ from 'jquery'
-    import localforage from 'localforage'
     import { mapGetters } from 'vuex'
-    var echarts = require('echarts');
 
     export default {
         name: 'userTrace',
