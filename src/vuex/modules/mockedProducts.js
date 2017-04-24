@@ -71,14 +71,12 @@
       data: [
           {
               name:'电脑上网时段',
-              type:'line',
-              stack: '总量',
+              type: 'line',
               data: [5, 100, 60, 50, 20, 30, 50, 15]
           },
           {
               name:'手机上网时段',
-              type:'line',
-              stack: '总量',
+              type: 'line',
               data: [15, 20, 30, 40, 50, 60, 1, 10]
           }
       ]
@@ -255,13 +253,11 @@ const product2 = {
           {
               name:'电脑上网时段',
               type:'line',
-              stack: '总量',
               data: [5, 100, 60, 50, 20, 30, 50, 15]
           },
           {
               name:'手机上网时段',
               type:'line',
-              stack: '总量',
               data: [15, 20, 30, 40, 50, 60, 1, 10]
           }
       ]

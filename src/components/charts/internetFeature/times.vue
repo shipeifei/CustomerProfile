@@ -33,22 +33,6 @@
             this.chart=echarts.init(document.getElementById(id));
             // 皮肤添加同一般使用方式
             this.chart.showLoading();
-            var data1 = [];
-            var data2 = [];
-            var data3 = [];
-            var data4 = [];
-
-            for (var i = 0; i < 10; i++) {
-                data1.push((Math.random() * 100).toFixed(2));
-                data2.push((Math.random() * 50).toFixed(2));
-                data3.push((Math.random() * 200).toFixed(2));
-                data4.push((Math.random() + 300).toFixed(2));
-            }
-
-            var itemStyle = {
-                normal: {
-                }
-            };
 
             let option = {
                 title: {
@@ -56,6 +40,7 @@
                 },
                 tooltip : {
                     trigger: 'axis',
+                    formatter:  "{b0}:<br/>&nbsp;&nbsp;&nbsp;&nbsp;{a0}: {c0} %<br/>&nbsp;&nbsp;&nbsp;&nbsp;{a1}: {c1} %",
                     axisPointer: {
                         type: 'cross',
                         label: {
@@ -64,8 +49,7 @@
                     }
                 },
                 legend: {
-                  show: false,
-                    data:['电脑上网时段', '手机上网时段']
+                    data: ['电脑上网时段', '手机上网时段']
                 },
                 grid: {
                     left: '3%',
@@ -73,28 +57,34 @@
                     bottom: '3%',
                     containLabel: true
                 },
-                xAxis : [
+                xAxis: [
                     {
                         type : 'category',
                         boundaryGap : false,
                         axisTick: {
-                          show:true
+                          show: true
                         },
-                        data : this.product_datas.internetFeature.times.legend
+                        data: this.product_datas.internetFeature.times.legend
                     }
                 ],
-                yAxis : [
+                yAxis: [
                     {
                         type : 'value',
-                        boundaryGap:true,
-                        axisTick: {
-                          show:true,
-                          alignWithLabel:true,
-                          inside:false
+                        axisLabel: {
+                            show: true,
+                            interval: 'auto',
+                            formatter: '{value} %'
                         }
                     }
                 ],
-                series : this.product_datas.internetFeature.times.data
+                series: this.product_datas.internetFeature.times.data.map(item => {
+                    const total = item.data.reduce((acc, val) => acc + val, 0);
+                    console.log(item.data.map(d => Number((d * 100 / total).toFixed(2))))
+                    return {
+                        ...item,
+                        data: item.data.map(d => Number((d * 100 / total).toFixed(2)))
+                    }
+                })
             };
             this.chart.setOption(option);
             this.chart.hideLoading();

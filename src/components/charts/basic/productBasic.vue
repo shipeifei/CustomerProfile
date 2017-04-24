@@ -37,7 +37,9 @@
             </div>
         </div>
         <div class="img middle">
-            <img src="./../../../assets/images/wordArtBoy.png" alt="" width="200px" height="500px" style="margin-left: 50px;"></img>
+            <img v-if="product_datas.basic.name == 'Thinkpad X1 Carbon'" src="./../../../assets/images/thinkpadX1.png" alt="" width="200px" height="500px" style="margin-left: 50px;"></img>
+            <img v-else-if="product_datas.basic.name == '小新'" src="./../../../assets/images/xiaoxin.png" alt="" width="200px" height="500px" style="margin-left: 50px;"></img>
+            <img v-else src="./../../../assets/images/wordArtBoy.png" alt="" width="200px" height="500px" style="margin-left: 50px;"></img>
         </div>
         <div class="basic-info-container">
           <table cellpadding="0" cellspacing="0">

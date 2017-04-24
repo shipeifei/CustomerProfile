@@ -2,13 +2,10 @@
     <el-collapse v-model="activeNames">
         <el-collapse-item title="家庭状况" name="1">
             <el-row>
-                <el-col :md="8">
-                    <sex></sex>
-                </el-col>
-                <el-col :md="8">
+                <el-col :md="12">
                     <married></married>
                 </el-col>
-                <el-col :md="8">
+                <el-col :md="12">
                     <baby></baby>
                 </el-col>
             </el-row>

@@ -27,19 +27,20 @@
            var myChart = echarts.init(document.getElementById('area-chart-container'));
            let option = {
             title:{
-                text: '地域分布',
+                text: '地域分布Top 5',
                 x:'center'
             },
             color: ['#3398DB'],
             tooltip : {
                 trigger: 'axis',
+                formatter:  "{b}: {c} %",
                 axisPointer : {            // 坐标轴指示器，坐标轴触发有效
                     type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
                 }
             },
             grid: {
-                left: '3%',
-                right: '4%',
+                left: '20%',
+                right: '20%',
                 bottom: '3%',
                 containLabel: true
             },
@@ -58,15 +59,25 @@
             ],
             yAxis : [
                 {
-                    type : 'value'
+                    type : 'value',
+                    axisLabel: {
+                        show: true,
+                        interval: 'auto',
+                        formatter: '{value} %'
+                    }
                 }
             ],
             series : [
                 {
-                    name:'地域分布',
+                    name:'地域分布Top 5',
                     type:'bar',
                     itemStyle: {
                         normal: {
+                            label: {
+                                show: true,
+                                position: 'top',
+                                formatter: "{c} %"  
+                            },
                             color: colorsFunc
                         }
                     },

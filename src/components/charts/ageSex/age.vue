@@ -7,7 +7,7 @@
     var echarts = require('echarts');
 
     export default {
-          name: 'mallBehavior',
+        name: 'mallBehavior',
         data() {
             return {
                labelPosition: 'right',
@@ -28,22 +28,23 @@
            let option = {
             title:{
                 text: '用户年龄分布',
-                x:'center'
+                x: 'center'
             },
             color: ['#3398DB'],
             tooltip : {
                 trigger: 'axis',
+                formatter:  "{b}: {c} %",
                 axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
                 }
             },
             grid: {
-                left: '3%',
-                right: '4%',
+                left: '20%',
+                right: '20%',
                 bottom: '3%',
                 containLabel: true
             },
-            xAxis : [
+            xAxis: [
                 {
                     type : 'category',
                     data : this.product_datas.ageSex.age.legend,
@@ -56,17 +57,27 @@
                     }
                 }
             ],
-            yAxis : [
+            yAxis: [
                 {
-                    type : 'value'
+                    type : 'value',
+                    axisLabel: {
+                        show: true,
+                        interval: 'auto',
+                        formatter: '{value} %'
+                    }
                 }
             ],
             series : [
                 {
-                    name:'用户年龄分布',
-                    type:'bar',
+                    name: '用户年龄分布',
+                    type: 'bar',
                     itemStyle: {
                         normal: {
+                            label: {
+                                show: true,
+                                position: 'top',
+                                formatter: "{c} %"  
+                            },
                             color: colorsFunc
                         }
                     },

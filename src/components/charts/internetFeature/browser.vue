@@ -21,7 +21,7 @@
         },
         mounted() {
             var myChart = echarts.init(document.getElementById('browser-usage-chart-container'));
-           let option = {
+            let option = {
                 title: {
                     text: '',
                     x:'center'
@@ -31,29 +31,29 @@
                     formatter: "{b} : {d}%"
                 },
                 legend: {
-                	show:false,
-                    orient : 'vertical',
-                    x : 'right',
-                    y : 'center',
+                	show: false,
+                    orient: 'vertical',
+                    x: 'right',
+                    y: 'center',
                     data: this.product_datas.internetFeature.browser.legend
                 },
-                calculable : true,
-                series : [
+                calculable: true,
+                series: [
                     {
-                        name:'是否有孩子',
-                        type:'pie',
+                        name: '手机端浏览器使用分布',
+                        type: 'pie',
             			radius : '55%',
             			center: ['50%', '60%'],
             			itemStyle: {
 			                normal: {
-			                 	label:{
+			                 	label: {
 			                        show: true,
-			                        position:'outer',
+			                        position: 'outer',
 			                        formatter: "{b} : {d}%"
 			                    },
-                                color:colorsFunc
-			              }
-			          },
+                                color: colorsFunc
+                            }
+                        },
                         data: this.product_datas.internetFeature.browser.data
                     }
                 ]

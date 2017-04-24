@@ -43,7 +43,7 @@
                         name:'是否有孩子',
                         type:'pie',
             			radius : '55%',
-            			center: ['50%', '60%'],
+            			center: ['50%', '61%'],
             			itemStyle: {
 			                normal: {
 			                 	label:{
