@@ -1,10 +1,6 @@
 <template>
     <div class="user-container">
-    <!-- <el-breadcrumb separator="/">
-            <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-            <el-breadcrumb-item>用户轨迹跟踪</el-breadcrumb-item>
-        </el-breadcrumb> -->
-    <el-row>
+    <el-row v-if="current_page !== 'product_datas'">
         <el-col :md="24" >
             <section class="user-container-wrapper">
                 <div class="user-search-container">
@@ -36,6 +32,38 @@
             </section>
         </el-col>
     </el-row>
+    <el-row v-else>
+        <el-col :md="24" >
+            <section class="user-container-wrapper">
+                <div class="user-search-container">
+                    <user-search></user-search>
+                </div>
+                <div class="product-search-result" v-if="product_datas">
+                    <div>
+                        <basic></basic>
+                    </div>
+                    <div>
+                        <age-sex></age-sex>
+                    </div>
+                    <div>
+                        <product-area></product-area>
+                    </div>
+                    <div>
+                        <lenovo-id></lenovo-id>
+                    </div>
+                    <div>
+                        <family-status></family-status>
+                    </div>
+                    <div>
+                        <internet-feature></internet-feature>
+                    </div>
+                    <div>
+                        <action-feature></action-feature>
+                    </div>
+                </div>
+            </section>
+        </el-col>
+    </el-row>
 </div>
 </template>
 
@@ -50,8 +78,17 @@
     import pcActionFeature from '@/components/user/pcActionFeature.vue'
     import personPreference from '@/components/user/personPreference.vue'
     import wordArt from '@/components/user/wordArt.vue'
+
+    import basic from '@/components/product/basic.vue'
+    import internetFeature from '@/components/product/internetFeature.vue'
+    import ageSex from '@/components/product/ageSex.vue'
+    import area from '@/components/product/area.vue'
+    import familyStatus from '@/components/product/familyStatus.vue'
+    import lenovoID from '@/components/product/lenovoID.vue'
+    import actionFeature from '@/components/product/actionFeature.vue'
+
     import { mapGetters } from 'vuex'
-    var echarts = require('echarts');
+
     export default {
           name: 'index',
           components: {
@@ -62,7 +99,15 @@
             'userSearch': userSearch,
             'personPreference': personPreference,
             'personActive': personActive,
-            'wordArt': wordArt
+            'wordArt': wordArt,
+
+            'basic': basic,
+            'internetFeature': internetFeature,
+            'ageSex': ageSex,
+            'productArea': area,
+            'familyStatus': familyStatus,
+            'lenovoId': lenovoID,
+            'actionFeature': actionFeature
           },
         data() {
             return {
@@ -72,7 +117,9 @@
         computed: {
             ...mapGetters({
                 home_datas: 'home_datas',
-                user_datas: 'user_datas'
+                user_datas: 'user_datas',
+                product_datas: 'product_datas',
+                current_page: 'current_page'
             })
         },
         created () {
@@ -141,7 +188,7 @@
       margin-top: 20px;
     }
     .user-container-wrapper{
-      .user-search-result{
+      .user-search-result, .product-search-result{
         > h2{
           font-weight: 400;
           color: #1f2f3d;

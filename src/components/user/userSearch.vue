@@ -2,19 +2,20 @@
     <section class="user-search" v-loading.fullscreen.lock="fullscreenLoading" element-loading-text="拼命加载中">
         <div class="search-icon">
           <i class="icon tiezi"></i>
-      用户轨迹跟踪
+          <el-button-group>
+            <el-button :class="{'el-button--primary': current_page != 'product_datas'}" @click="changeCurrentPage('user_datas')" >用户轨迹</el-button>
+            <el-button :class="{'el-button--primary': current_page === 'product_datas'}" @click="changeCurrentPage('product_datas')">产品画像</el-button>
+          </el-button-group> 
         </div>
         <div class="search-block">
-            <el-form :model="userValidateForm" :inline="true" ref="userValidateForm">
-               <!--  <el-form-item prop="userName" :rules="[
-      { required: true, message: '用户不能为空'}
-    ]">
-                    <el-input icon="search" :on-icon-click="serchClick" v-model.trim="userValidateForm.userName" placeholder="查询用户" auto-complete="off"></el-input>
-                </el-form-item> -->
+            <el-form v-if="current_page !== 'product_datas'" :model="userValidateForm" :inline="true" ref="userValidateForm">
                 <el-form-item label="用户查询">
                     <el-autocomplete popper-class="my-autocomplete" v-model="userValidateForm.userName" :fetch-suggestions="querySearch" custom-item="my-item-zh" placeholder="Phone/LenovoID/Mail/IMEI/SN/ServiceUserID" @select="handleSelect" icon="search" :on-icon-click="serchClick"></el-autocomplete>
                 </el-form-item>
             </el-form>
+            <el-button-group v-else>
+              <el-button v-for="p in productNames" :key="p" :class="{'el-button--primary': currentProductName === p}" @click="changeCurrentProduct(p)" >{{p}}</el-button>
+            </el-button-group> 
         </div>
     </section>
 </template>
@@ -27,6 +28,7 @@
     import Vue from 'vue'
     import { mapGetters } from 'vuex'
     import users from '@/vuex/modules/mockedUsers'
+    import products from '@/vuex/modules/mockedProducts'
 
     Vue.component('my-item-zh', {
       functional: true,
@@ -47,13 +49,16 @@
                userValidateForm: {
                   userName: localStorage.getItem('customer-profile-username')?localStorage.getItem('customer-profile-username'):''
                },
-                restaurants: []
+                restaurants: [],
+                productNames: [],
+                currentProductName: ''
               }
         },
         computed: {
             ...mapGetters({
                 home_datas: 'home_datas',
                 user_datas: 'user_datas',
+                current_page: 'current_page',
                 fullscreenLoading:'fullscreenLoading'
             })
         },
@@ -62,8 +67,24 @@
         },
         mounted() {
            this.restaurants = this.loadAll();
+           this.productNames = this.loadAllProducts();
+           this.currentProductName = this.productNames[0].value;
         },
         methods: {
+          changeCurrentPage(current_page) {
+            this.$store.dispatch('changeCurrentPage', current_page);
+            if (current_page == 'product_datas') {
+              if (!this.currentProductName) {
+                this.changeCurrentProduct(this.productNames[0]);
+              }
+            }
+          },
+          changeCurrentProduct(productName) {
+            if (this.currentProductName != productName) {
+              this.currentProductName = productName;
+              this.$store.dispatch('getProductInfo', productName);
+            }
+          },
           serchClick(){
               const userName = this.userValidateForm.userName.trim();
                 if ( userName.length > 0 ) {
@@ -95,6 +116,9 @@
           },
           loadAll() {
             return users.map(user => ({value: user.userBaseInfo.phone}));
+          },
+          loadAllProducts() {
+            return products.map(product => product.basic.name);
           },
           handleSelect(item) {
              this.serchClick();             
