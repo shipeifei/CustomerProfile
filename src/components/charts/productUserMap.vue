@@ -47,12 +47,12 @@
                     show: true,
                     orient: 'vertical',
                     left: 'top',
-                    data: this.product_datas.area.legend
+                    data: this.product_datas.area.data.map(item => item.name)
                 },
                 visualMap: {
-                    show:false,
-                    min: 800,
-                    max: 50000,
+                    show: false,
+                    min: 1,
+                    max: 30,
                     left: 'left',
                     top: 'bottom',
                     splitNumber: 5,
@@ -60,8 +60,8 @@
                     text: ['高','低'],           // 文本，默认为数值文本
                     calculable: true,
                     inRange: {
-                        //少到多
-                        color: colors
+                        // 少到多
+                        color: ['lightskyblue','yellow', 'orangered']
                     }
                 },
                 series: [
@@ -85,9 +85,9 @@
                         },
                         itemStyle: {
                             normal: {
-                                borderWidth: .5,//区域边框宽度
-                                borderColor: '#009fe8',//区域边框颜色
-                                areaColor:"#FFFFFF",//区域颜色
+                                borderWidth: .5, //区域边框宽度
+                                borderColor: '#009fe8', //区域边框颜色
+                                areaColor: '#FFFFFF', // 区域颜色
                             },
                             emphasis: {
                                 borderWidth: .5,

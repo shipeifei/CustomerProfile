@@ -27,7 +27,7 @@
            var myChart = echarts.init(document.getElementById('area-chart-container'));
            let option = {
             title:{
-                text: '地域分布Top 5',
+                text: '地域分布Top ' + this.product_datas.area.legend.length,
                 x:'center'
             },
             color: ['#3398DB'],
@@ -69,7 +69,7 @@
             ],
             series : [
                 {
-                    name:'地域分布Top 5',
+                    name:'地域分布Top ' + this.product_datas.area.legend.length,
                     type:'bar',
                     itemStyle: {
                         normal: {
@@ -82,7 +82,7 @@
                         }
                     },
                     barWidth: '60%',
-                    data: this.product_datas.area.data
+                    data: this.product_datas.area.data.slice(0, 5)
                 }
             ]
         };
