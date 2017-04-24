@@ -43,7 +43,7 @@ const user1 = {
     // 设备接入
     "userDevice": {
         "legend": ["PC", "Mobile"],
-        "series": [
+        "data": [
             { "value": 100, "name": "PC" },
             { "value": 200, "name": "Mobile" }
         ]
@@ -51,7 +51,7 @@ const user1 = {
     // 手机型号接入
     "phoneModel": {
         "legend": ['Moto Z', 'ZUK'],
-        "series": [
+        "data": [
             { value: 1000, name: 'Moto Z' },
             { value: 2000, name: 'ZUK' }
         ]
@@ -327,7 +327,7 @@ const user2 = {
     // 设备接入
     "userDevice": {
         "legend": ["PC", "Mobile"],
-        "series": [
+        "data": [
             { "value": 100, "name": "PC" },
             { "value": 300, "name": "Mobile" }
                     ]
@@ -335,7 +335,7 @@ const user2 = {
     // 手机型号接入
     "phoneModel": {
         "legend": ['Z2', 'Moto Z'],
-        "series": [
+        "data": [
             { value: 1000, name: 'Z2' },
             { value: 1000, name: 'Moto Z' }
         ]
@@ -611,7 +611,7 @@ const user3 = {
     // 设备接入
     "userDevice": {
         "legend": ["PC", "Mobile"],
-        "series": [
+        "data": [
             { "value": 100, "name": "PC" },
             { "value": 100, "name": "Mobile" }
                     ]
@@ -619,7 +619,7 @@ const user3 = {
     // 手机型号接入
     "phoneModel": {
         "legend": ['Z1', 'Moto Z'],
-        "series": [
+        "data": [
             { value: 1000, name: 'Z1' },
             { value: 1000, name: 'Moto Z' }
         ]
@@ -895,7 +895,7 @@ const user4 = {
     // 设备接入
     "userDevice": {
         "legend": ["PC", "Mobile"],
-        "series": [
+        "data": [
             { "value": 100, "name": "PC" },
             { "value": 100, "name": "Mobile" }
                     ]
@@ -903,7 +903,7 @@ const user4 = {
     // 手机型号接入
     "phoneModel": {
         "legend": ['Z1', 'Moto Z'],
-        "series": [
+        "data": [
             { value: 1000, name: 'Z1' },
             { value: 1000, name: 'Moto Z' }
         ]
@@ -1179,7 +1179,7 @@ const user5 = {
     // 设备接入
     "userDevice": {
         "legend": ["PC", "Mobile"],
-        "series": [
+        "data": [
             { "value": 100, "name": "PC" },
             { "value": 100, "name": "Mobile" }
                     ]
@@ -1187,7 +1187,7 @@ const user5 = {
     // 手机型号接入
     "phoneModel": {
         "legend": ['Z1', 'Moto Z'],
-        "series": [
+        "data": [
             { value: 1000, name: 'Z1' },
             { value: 1000, name: 'Moto Z' }
         ]
