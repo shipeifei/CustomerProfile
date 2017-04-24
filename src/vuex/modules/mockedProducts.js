@@ -60,7 +60,12 @@
         {value: 12.2, name: '广东'},
         {value: 9.2, name: '江苏'},
         {value: 8.6, name: '上海'},
-        {value: 6.7, name: '浙江'}
+        {value: 6.7, name: '浙江'},
+		{value: 5.5, name: '山东'},
+		{value: 3.9, name: '四川'},
+		{value: 3.7, name: '河南'},
+		{value: 3.5, name: '湖北'},
+		{value: 2.8, name: '安徽'}
       ]
   },
   // 上网特征
@@ -72,12 +77,12 @@
           {
               name:'电脑上网时段',
               type: 'line',
-              data: [5, 100, 60, 50, 20, 30, 50, 15]
+              data: [5, 20, 160, 50, 200, 30, 260, 15]
           },
           {
               name:'手机上网时段',
               type: 'line',
-              data: [15, 20, 30, 40, 50, 60, 1, 10]
+              data: [15, 20, 30, 40, 50, 60, 71, 10]
           }
       ]
     },
@@ -237,11 +242,16 @@ const product2 = {
   area: {
     legend: ['北京', '广东', '河南', '上海', '浙江'],
     data: [
-        {value: 28, name: '北京'},
+        {value: 28.7, name: '北京'},
         {value: 12, name: '广东'},
         {value: 8, name: '河南'},
         {value: 7, name: '上海'},
-        {value: 7, name: '浙江'}
+        {value: 7, name: '浙江'},
+		{value: 5, name: '四川'},
+		{value: 4.6, name: '安徽'},
+		{value: 4.2, name: '江苏'},
+		{value: 2.5, name: '山东'},
+		{value: 2.3, name: '湖北'}
       ]
   },
   // 上网特征
@@ -253,12 +263,12 @@ const product2 = {
           {
               name:'电脑上网时段',
               type:'line',
-              data: [5, 100, 60, 50, 20, 30, 50, 15]
+              data: [5, 100, 160, 50, 220, 30, 350, 15]
           },
           {
               name:'手机上网时段',
               type:'line',
-              data: [15, 20, 30, 40, 50, 60, 1, 10]
+              data: [15, 20, 30, 40, 50, 60, 81, 10]
           }
       ]
     },

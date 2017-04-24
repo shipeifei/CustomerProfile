@@ -50,9 +50,9 @@
                     data: this.product_datas.area.data.map(item => item.name)
                 },
                 visualMap: {
-                    show: false,
+                    show: true,
                     min: 1,
-                    max: 30,
+                    max: 25,
                     left: 'left',
                     top: 'bottom',
                     splitNumber: 5,
