@@ -127,7 +127,7 @@
         }
     }
 </script>
-<style type="less">
+<style lang="less">
 .basic_info .el-form .el-form-item {
     margin-bottom: 0;
 }

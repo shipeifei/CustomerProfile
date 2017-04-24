@@ -1,12 +1,12 @@
 <template>
     <section class="user-search" v-loading.fullscreen.lock="fullscreenLoading" element-loading-text="拼命加载中">
-        <div class="search-icon">
+        <!--<div class="search-icon">
           <i class="icon tiezi"></i>
           <el-button-group>
             <el-button :class="{'el-button--primary': current_page != 'product_datas'}" @click="changeCurrentPage('user_datas')" >用户轨迹</el-button>
             <el-button :class="{'el-button--primary': current_page === 'product_datas'}" @click="changeCurrentPage('product_datas')">产品画像</el-button>
           </el-button-group> 
-        </div>
+        </div>-->
         <div class="search-block">
             <el-form v-if="current_page !== 'product_datas'" :model="userValidateForm" :inline="true" ref="userValidateForm">
                 <el-form-item label="用户查询">

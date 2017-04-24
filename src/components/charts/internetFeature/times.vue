@@ -1,9 +1,6 @@
 <template>
 <div>
-    <div style="font-size: 18px; font-weight: bold; text-align: center;">
-        上网时段曲线
-    </div>
-    <div id="times-chart-container" class="chart-container" style="margin-top: -62px;"></div>
+    <div id="times-chart-container" class="chart-container"></div>
 </div>
 </template>
 <script type="text/babel">
@@ -36,7 +33,7 @@
 
             let option = {
                 title: {
-                    text: ''
+                    text: '上网时段曲线'
                 },
                 tooltip : {
                     trigger: 'axis',
@@ -49,7 +46,7 @@
                     }
                 },
                 legend: {
-                    data: ['电脑上网时段', '手机上网时段']
+                    data: this.product_datas.internetFeature.times.data.map(item => item.name)
                 },
                 grid: {
                     left: '3%',
@@ -86,6 +83,7 @@
                     }
                 })
             };
+
             this.chart.setOption(option);
             this.chart.hideLoading();
           }
