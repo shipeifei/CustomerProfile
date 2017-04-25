@@ -76,7 +76,6 @@
                 ],
                 series: this.product_datas.internetFeature.times.data.map(item => {
                     const total = item.data.reduce((acc, val) => acc + val, 0);
-                    console.log(item.data.map(d => Number((d * 100 / total).toFixed(2))))
                     return {
                         ...item,
                         data: item.data.map(d => Number((d * 100 / total).toFixed(2)))
